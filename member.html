@@ -1,147 +1,149 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ja">
+
 <head>
 
   <meta charset="UTF-8">
 
   <meta name="description" content="M-GTA研究会（実践的グランデッド・セオリー研究会）">
   <meta name="keywords" content="M-GTA研究,実践的グランデッド・セオリー研究会">
-	<title>会員専用ページ|M-GTA研究会（実践的グランデッド・セオリー研究会）</title>
+  <title>会員専用ページ|M-GTA研究会（実践的グランデッド・セオリー研究会）</title>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
   <script src="/js/jquery.bxslider.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.2.0/iscroll.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/js/drawer.min.js"></script>
-	<link href="/css/base.css" rel="stylesheet" type="text/css" media="all">
+  <link href="/css/base.css" rel="stylesheet" type="text/css" media="all">
   <link rel="stylesheet" type="text/css" href="/css/colorbox.css">
-	<link rel="shortcut icon" href="img/favicon.ico">
+  <link rel="shortcut icon" href="img/favicon.ico">
   <script src="/js/jquery.colorbox.js"></script>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/css/drawer.min.css" rel="stylesheet" type="text/css" media="all">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/css/drawer.min.css" rel="stylesheet" type="text/css"
+    media="all">
   <link href="/css/style.min.css" rel="stylesheet" type="text/css" media="all">
   <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
 </head>
 
 <body class="page drawer drawer--right">
   <main>
-<header>
-  <div class="fixnav">
+    <header>
+      <div class="fixnav">
 
-      <div class="h1wrap">
-        <div class="inner-big">
-      <p class="h1"><a href="/">M-GTA研究会<span>（実践的グランデッド・セオリー研究会）</span></a></p>
-      <div class="search">
-        <form method="get" action="https://www.google.co.jp/search" target="_blank">
-          <input type="text" name="q" size="31" maxlength="255" value="">
-          <input type="submit" name="btng" value="検索">
-          <input type="hidden" name="hl" value="ja">
-          <input type="hidden" name="sitesearch" value="https://m-gta.jp/">
-        </form>
+        <div class="h1wrap">
+          <div class="inner-big">
+            <p class="h1"><a href="/">M-GTA研究会<span>（実践的グランデッド・セオリー研究会）</span></a></p>
+            <div class="search">
+              <form method="get" action="https://www.google.co.jp/search" target="_blank">
+                <input type="text" name="q" size="31" maxlength="255" value="">
+                <input type="submit" name="btng" value="検索">
+                <input type="hidden" name="hl" value="ja">
+                <input type="hidden" name="sitesearch" value="https://m-gta.jp/">
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <div class="mainnav_wrap">
+          <div class="inner-big">
+            <nav>
+              <ul class="top_nav">
+                <li><a href="/">Home<i class="fas fa-chevron-right"></i></a></li>
+                <li><a href="/en/" target="_blank">English<i class="fas fa-chevron-right"></i></a></li>
+              </ul>
+              </ul>
+              <ul class="mainmav">
+                <li><a href="about.html">M-GTAとは</a></li>
+                <li><a href="works.html">研究会の活動</a></li>
+                <li><a href="intro.html">会員による研究の紹介</a></li>
+                <li><a href="contact.html">入会・お問い合わせ</a></li>
+                <l class="current" i><a href="member.html">会員専用ページ</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
       </div>
-       </div>
-    </div>
 
-      <div class="mainnav_wrap">
-        <div class="inner-big">
-        <nav>
-          <ul class="top_nav">
-            <li><a href="/">Home<i class="fas fa-chevron-right"></i></a></li>
-            <li><a href="/en/" target="_blank">English<i class="fas fa-chevron-right"></i></a></li>
-          </ul>
-          </ul>
-          <ul class="mainmav">
-            <li><a href="about.html">M-GTAとは</a></li>
-            <li><a href="works.html">研究会の活動</a></li>
-            <li><a href="intro.html">会員による研究の紹介</a></li>
-            <li><a href="contact.html">入会・お問い合わせ</a></li>
-            <l class="current"i><a href="member.html">会員専用ページ</a></li>
-          </ul>
-        </nav>
+      <!--ドロワー-->
+      <button type="button" class="pc-none drawer-toggle drawer-hamburger">
+        <!--<span class="sr-only"><img src="/img/common/menu.png"></span>-->
+        <span class="drawer-hamburger-icon"></span>
+      </button>
+      <nav class="pc-none drawer-nav accordion-container" role="navigation" id="accordion">
+        <ul class="drawer-menu">
+          <li class="menu-item"><a href="/">HOME</a></li>
+          <li class="menu-item"><a href="about.html">M-GTAとは</a></li>
+          <li class="menu-item"><a href="works.html">研究会の活動</a></li>
+          <li class="menu-item"><a href="intro.html">会員による研究の紹介</a></li>
+          <li class="menu-item"><a href="contact.html">入会・お問い合わせ</a></li>
+          <li class="menu-item"><a href="member.html">会員専用ページ</a></li>
+          <li class="menu-item"><a href="/en/" target="_blank">English Site</a></li>
+        </ul>
+      </nav>
       </div>
-    </div>
-  </div>
+    </header>
+    <article>
+      <h1 class="page-h1">会員専用ページ</h1>
+      <!--サイドメニューここから-->
+      <div class="contens inner">
+        <div class="side">
+          <nav class="side-nav">
+            <h2>CONTENTS MENU</h2>
+            <ul>
+              <li class="clearfix"><a href="#a">定例研究会発表要綱<i class="fas fa-chevron-right"></i></a></li>
+              <li class="clearfix"><a href="#b">募集要項<i class="fas fa-chevron-right"></i></a></li>
+              <li class="clearfix"><a href="#c">修士論文発表会発表要項<i class="fas fa-chevron-right"></i></a></li>
+              <li class="clearfix"><a href="#d">ニューズレター<i class="fas fa-chevron-right"></i></a></li>
+              <li class="clearfix"><a href="#e">研究例登録フォーム<i class="fas fa-chevron-right"></i></a></li>
+            </ul>
+          </nav>
+          <div class="contact">
+            <h3>ご入会•お問い合わせ</h3>
+            <p>ご入会や研究会へのお問い合わせは<br class="sp-none">こちらへどうぞ</p>
+            <p class="mt50 link-b3"><a class="clearfix" href="contact.html">メールでのお問い合わせ<i
+                  class="fas fa-chevron-right"></i></a></p>
+          </div>
+        </div>
+        <!--サイドメニューここまで-->
+        <!--メインコンテンツここから-->
+        <div class="main">
+          <!--パンくずリスト-->
+          <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+              <a itemprop="item" href="/">
+                <span itemprop="name">home</span>
+              </a>
+              <meta itemprop="position" content="1" />
+            </li>
 
-  <!--ドロワー-->
-  <button type="button" class="pc-none drawer-toggle drawer-hamburger">
-    <!--<span class="sr-only"><img src="/img/common/menu.png"></span>-->
-    <span class="drawer-hamburger-icon"></span>
-  </button>
-  <nav class="pc-none drawer-nav accordion-container" role="navigation" id= "accordion">
-    <ul class="drawer-menu">
-      <li class="menu-item"><a href="/">HOME</a></li>
-      <li class="menu-item"><a href="about.html">M-GTAとは</a></li>
-    <li class="menu-item"><a href="works.html">研究会の活動</a></li>
-    <li class="menu-item"><a href="intro.html">会員による研究の紹介</a></li>
-    <li class="menu-item"><a href="contact.html">入会・お問い合わせ</a></li>
-    <li class="menu-item"><a href="member.html">会員専用ページ</a></li>
-    <li class="menu-item"><a href="/en/" target="_blank">English Site</a></li>
-    </ul>
-  </nav>
-</div>
-</header>
-<article>
-  <h1 class="page-h1">会員専用ページ</h1>
-  <!--サイドメニューここから-->
-  <div class="contens inner">
-  <div class="side">
-    <nav class="side-nav">
-      <h2>CONTENTS MENU</h2>
-      <ul>
-        <li class="clearfix"><a href="#a">定例研究会発表要綱<i class="fas fa-chevron-right"></i></a></li>
-        <li class="clearfix"><a href="#b">募集要項<i class="fas fa-chevron-right"></i></a></li>
-        <li class="clearfix"><a href="#c">修士論文発表会発表要項<i class="fas fa-chevron-right"></i></a></li>
-        <li class="clearfix"><a href="#d">ニューズレター<i class="fas fa-chevron-right"></i></a></li>
-        <li class="clearfix"><a href="#e">研究例登録フォーム<i class="fas fa-chevron-right"></i></a></li>
-      </ul>
-    </nav>
-    <div class="contact">
-      <h3>ご入会•お問い合わせ</h3>
-      <p>ご入会や研究会へのお問い合わせは<br class="sp-none">こちらへどうぞ</p>
-      <p class="mt50 link-b3"><a class="clearfix" href="contact.html">メールでのお問い合わせ<i class="fas fa-chevron-right"></i></a></p>
-    </div>
-  </div>
-  <!--サイドメニューここまで-->
-  <!--メインコンテンツここから-->
-  <div class="main">
-    <!--パンくずリスト-->
-    <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
-      <li itemprop="itemListElement" itemscope
-      itemtype="https://schema.org/ListItem">
-      <a itemprop="item" href="/">
-        <span itemprop="name">home</span>
-      </a>
-      <meta itemprop="position" content="1" />
-      </li>
-
-      <li itemprop="itemListElement" itemscope
-        itemtype="https://schema.org/ListItem">
-        <a itemprop="item" href="about.html">
-          <span itemprop="name">会員専用ページ</span>
-        </a>
-        <meta itemprop="position" content="2" />
-      </li>
-    </ol>
-    <!--パンくずリスト-->
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+              <a itemprop="item" href="about.html">
+                <span itemprop="name">会員専用ページ</span>
+              </a>
+              <meta itemprop="position" content="2" />
+            </li>
+          </ol>
+          <!--パンくずリスト-->
 
 
-    <section id="a">
-     <h2 class="page-h2">工事中</h2>
-          <p>現在制作中　少々お待ちください。</p>
+          <section id="a">
+            <h2 class="page-h2">工事中</h2>
+            <p>現在制作中　少々お待ちください。</p>
 
 
 
 
-    </section>
+          </section>
 
 
-       </div>
+        </div>
 
 
 
 
 
-  </div>
-   </div>  <!--コンテンツここまで-->
-</article>
-</main>
+      </div>
+      </div>
+      <!--コンテンツここまで-->
+    </article>
+  </main>
   <footer>
     <div class="inner-mini">
       <nav class="footnav">
@@ -162,62 +164,63 @@
     </div>
 
 
-        <!-- ページトップへ戻るボタン -->
-        <p class="pagetop" style="display: block;">
-        <a href="#"><img src="/img/modoru.png"></a>
-        </p>
+    <!-- ページトップへ戻るボタン -->
+    <p class="pagetop" style="display: block;">
+      <a href="#"><img src="/img/modoru.png"></a>
+    </p>
   </footer>
 
   <script>
-$(function(){
-  $('a[href^="#"]').click(function(){
-    var speed = 500;
-    var headerHight = 130;
-    var href= $(this).attr("href");
-    var target = $(href == "#" || href == "" ? 'html' : href);
-    var position = target.offset().top-headerHight;
-    $("html, body").animate({scrollTop:position}, speed, "swing");
-    return false;
-  });
-});
-</script>
-
-
-<script>
-jQuery(document).ready(function() {
-  jQuery('.drawer').drawer({
- class: {
-   nav: 'drawer-nav',
-   toggle: 'drawer-toggle',
-   overlay: 'drawer-overlay',
-   open: 'drawer-open',
-   close: 'drawer-close',
-   dropdown: 'drawer-dropdown'
- },
- iscroll: {
-   // Configuring the iScroll
-   // https://github.com/cubiq/iscroll#configuring-the-iscroll
-   mouseWheel: true,
-   preventDefault: false
- },
- showOverlay: true
-});
-});
-</script>
-
-<script>
-jQuery(function(){
- jQuery(window).scroll(function (){
-    jQuery('.effect-fade').each(function(){
-        var elemPos = $(this).offset().top;
-        var scroll = $(window).scrollTop();
-        var windowHeight = $(window).height();
-        if (scroll > elemPos - windowHeight){
-            $(this).addClass('effect-scroll');
-        }
+    $(function () {
+      $('a[href^="#"]').click(function () {
+        var speed = 500;
+        var headerHight = 130;
+        var href = $(this).attr("href");
+        var target = $(href == "#" || href == "" ? 'html' : href);
+        var position = target.offset().top - headerHight;
+        $("html, body").animate({ scrollTop: position }, speed, "swing");
+        return false;
+      });
     });
- });
-});
-</script>
+  </script>
+
+
+  <script>
+    jQuery(document).ready(function () {
+      jQuery('.drawer').drawer({
+        class: {
+          nav: 'drawer-nav',
+          toggle: 'drawer-toggle',
+          overlay: 'drawer-overlay',
+          open: 'drawer-open',
+          close: 'drawer-close',
+          dropdown: 'drawer-dropdown'
+        },
+        iscroll: {
+          // Configuring the iScroll
+          // https://github.com/cubiq/iscroll#configuring-the-iscroll
+          mouseWheel: true,
+          preventDefault: false
+        },
+        showOverlay: true
+      });
+    });
+  </script>
+
+  <script>
+    jQuery(function () {
+      jQuery(window).scroll(function () {
+        jQuery('.effect-fade').each(function () {
+          var elemPos = $(this).offset().top;
+          var scroll = $(window).scrollTop();
+          var windowHeight = $(window).height();
+          if (scroll > elemPos - windowHeight) {
+            $(this).addClass('effect-scroll');
+          }
+        });
+      });
+    });
+  </script>
 </body>
+
 </html>
