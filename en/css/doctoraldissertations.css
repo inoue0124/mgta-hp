@@ -1,0 +1,40 @@
+@charset "utf-8";
+
+#main table {
+	width: 700px;
+}
+
+#main th {
+	border-collapse: collapse;
+	border: solid 1px #ddd;
+	border-top: solid 3px #ddd;
+	border-bottom: solid 3px #ddd;
+	padding: 10px;
+	background-color: #efefef;
+	text-align: center;
+}
+
+#main th:nth-child(1) {
+	width: 15%;
+}
+
+#main th:nth-child(2) {
+	width: 40%;
+}
+
+#main th:nth-child(3) {
+	width: 35%;
+}
+
+#main th:nth-child(4) {
+	width: 10%;
+}
+
+#main td {
+	border-collapse: collapse;
+	border: solid 1px #ddd;
+	border-bottom: solid 3px #ddd;
+	padding: 10px;
+	word-break:all;
+}
+
