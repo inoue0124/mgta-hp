@@ -217,15 +217,15 @@ else if($confirmDsp == 1){
  <meta name="keywords" content="M-GTA研究,実践的グランデッド・セオリー研究会">
  <title>入会・お問い合わせ|M-GTA研究会（実践的グランデッド・セオリー研究会）</title>
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
- <script src="/js/jquery.bxslider.js"></script>
+ <script src="./js/jquery.bxslider.js"></script>
  <script src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.2.0/iscroll.min.js"></script>
  <script src="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/js/drawer.min.js"></script>
- <link href="/css/base.css" rel="stylesheet" type="text/css" media="all">
- <link rel="stylesheet" type="text/css" href="/css/colorbox.css">
+ <link href="./css/base.css" rel="stylesheet" type="text/css" media="all">
+ <link rel="stylesheet" type="text/css" href="./css/colorbox.css">
  <link rel="shortcut icon" href="img/favicon.ico">
- <script src="/js/jquery.colorbox.js"></script>
+ <script src="./js/jquery.colorbox.js"></script>
  <link href="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/css/drawer.min.css" rel="stylesheet" type="text/css" media="all">
- <link href="/css/style.min.css" rel="stylesheet" type="text/css" media="all">
+ <link href="./css/style.min.css" rel="stylesheet" type="text/css" media="all">
  <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
 </head>
 
@@ -236,7 +236,7 @@ else if($confirmDsp == 1){
 
 		 <div class="h1wrap">
 			 <div class="inner-big">
-		 <p class="h1"><a href="/">M-GTA研究会<span>（実践的グランデッド・セオリー研究会）</span></a></p>
+		 <p class="h1"><a href="./">M-GTA研究会<span>（実践的グランデッド・セオリー研究会）</span></a></p>
 		 <div class="search">
 			 <form method="get" action="https://www.google.co.jp/search" target="_blank">
 				 <input type="text" name="q" size="31" maxlength="255" value="">
@@ -252,8 +252,8 @@ else if($confirmDsp == 1){
 			 <div class="inner-big">
 			 <nav>
 				 <ul class="top_nav">
-					 <li><a href="/">Home<i class="fas fa-chevron-right"></i></a></li>
-					 <li><a href="/en/" target="_blank">English<i class="fas fa-chevron-right"></i></a></li>
+					 <li><a href="./">Home<i class="fas fa-chevron-right"></i></a></li>
+					 <li><a href="./en/" target="_blank">English<i class="fas fa-chevron-right"></i></a></li>
 				 </ul>
 				 </ul>
 				 <ul class="mainmav">
@@ -270,18 +270,18 @@ else if($confirmDsp == 1){
 
  <!--ドロワー-->
  <button type="button" class="pc-none drawer-toggle drawer-hamburger">
-	 <!--<span class="sr-only"><img src="/img/common/menu.png"></span>-->
+	 <!--<span class="sr-only"><img src="./img/common/menu.png"></span>-->
 	 <span class="drawer-hamburger-icon"></span>
  </button>
  <nav class="pc-none drawer-nav accordion-container" role="navigation" id= "accordion">
 	 <ul class="drawer-menu">
-		 <li class="menu-item"><a href="/">HOME</a></li>
+		 <li class="menu-item"><a href="./">HOME</a></li>
 		 <li class="menu-item"><a href="about.html">M-GTAとは</a></li>
 	 <li class="menu-item"><a href="works.html">研究会の活動</a></li>
 	 <li class="menu-item"><a href="intro.html">会員による研究の紹介</a></li>
 	 <li class="menu-item"><a href="contact.html">入会・お問い合わせ</a></li>
 	 <li class="menu-item"><a href="member.html">会員専用ページ</a></li>
-	 <li class="menu-item"><a href="/en/" target="_blank">English Site</a></li>
+	 <li class="menu-item"><a href="./en/" target="_blank">English Site</a></li>
 	 </ul>
  </nav>
 </div>
@@ -311,7 +311,7 @@ else if($confirmDsp == 1){
 	 <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
 		 <li itemprop="itemListElement" itemscope
 		 itemtype="https://schema.org/ListItem">
-		 <a itemprop="item" href="/">
+		 <a itemprop="item" href="./">
 			 <span itemprop="name">home</span>
 		 </a>
 		 <meta itemprop="position" content="1" />
@@ -387,7 +387,7 @@ else if($confirmDsp == 1){
 
         <!-- ページトップへ戻るボタン -->
         <p class="pagetop" style="display: block;">
-        <a href="#"><img src="/img/modoru.png"></a>
+        <a href="#"><img src="./img/modoru.png"></a>
         </p>
   </footer>
 
@@ -464,15 +464,15 @@ if(($jumpPage == 0 && $sendmail == 1) || ($jumpPage == 0 && ($confirmDsp == 0 &&
  <meta name="keywords" content="M-GTA研究,実践的グランデッド・セオリー研究会">
  <title>入会・お問い合わせ|M-GTA研究会（実践的グランデッド・セオリー研究会）</title>
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
- <script src="/js/jquery.bxslider.js"></script>
+ <script src="./js/jquery.bxslider.js"></script>
  <script src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.2.0/iscroll.min.js"></script>
  <script src="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/js/drawer.min.js"></script>
- <link href="/css/base.css" rel="stylesheet" type="text/css" media="all">
- <link rel="stylesheet" type="text/css" href="/css/colorbox.css">
+ <link href="./css/base.css" rel="stylesheet" type="text/css" media="all">
+ <link rel="stylesheet" type="text/css" href="./css/colorbox.css">
  <link rel="shortcut icon" href="img/favicon.ico">
- <script src="/js/jquery.colorbox.js"></script>
+ <script src="./js/jquery.colorbox.js"></script>
  <link href="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/css/drawer.min.css" rel="stylesheet" type="text/css" media="all">
- <link href="/css/style.min.css" rel="stylesheet" type="text/css" media="all">
+ <link href="./css/style.min.css" rel="stylesheet" type="text/css" media="all">
  <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
 </head>
 
@@ -483,7 +483,7 @@ if(($jumpPage == 0 && $sendmail == 1) || ($jumpPage == 0 && ($confirmDsp == 0 &&
 
 		 <div class="h1wrap">
 			 <div class="inner-big">
-		 <p class="h1"><a href="/">M-GTA研究会<span>（実践的グランデッド・セオリー研究会）</span></a></p>
+		 <p class="h1"><a href="./">M-GTA研究会<span>（実践的グランデッド・セオリー研究会）</span></a></p>
 		 <div class="search">
 			 <form method="get" action="https://www.google.co.jp/search" target="_blank">
 				 <input type="text" name="q" size="31" maxlength="255" value="">
@@ -499,8 +499,8 @@ if(($jumpPage == 0 && $sendmail == 1) || ($jumpPage == 0 && ($confirmDsp == 0 &&
 			 <div class="inner-big">
 			 <nav>
 				 <ul class="top_nav">
-					 <li><a href="/">Home<i class="fas fa-chevron-right"></i></a></li>
-					 <li><a href="/en/" target="_blank">English<i class="fas fa-chevron-right"></i></a></li>
+					 <li><a href="./">Home<i class="fas fa-chevron-right"></i></a></li>
+					 <li><a href="./en/" target="_blank">English<i class="fas fa-chevron-right"></i></a></li>
 				 </ul>
 				 </ul>
 				 <ul class="mainmav">
@@ -517,18 +517,18 @@ if(($jumpPage == 0 && $sendmail == 1) || ($jumpPage == 0 && ($confirmDsp == 0 &&
 
  <!--ドロワー-->
  <button type="button" class="pc-none drawer-toggle drawer-hamburger">
-	 <!--<span class="sr-only"><img src="/img/common/menu.png"></span>-->
+	 <!--<span class="sr-only"><img src="./img/common/menu.png"></span>-->
 	 <span class="drawer-hamburger-icon"></span>
  </button>
  <nav class="pc-none drawer-nav accordion-container" role="navigation" id= "accordion">
 	 <ul class="drawer-menu">
-		 <li class="menu-item"><a href="/">HOME</a></li>
+		 <li class="menu-item"><a href="./">HOME</a></li>
 		 <li class="menu-item"><a href="about.html">M-GTAとは</a></li>
 	 <li class="menu-item"><a href="works.html">研究会の活動</a></li>
 	 <li class="menu-item"><a href="intro.html">会員による研究の紹介</a></li>
 	 <li class="menu-item"><a href="contact.html">入会・お問い合わせ</a></li>
 	 <li class="menu-item"><a href="member.html">会員専用ページ</a></li>
-	 <li class="menu-item"><a href="/en/" target="_blank">English Site</a></li>
+	 <li class="menu-item"><a href="./en/" target="_blank">English Site</a></li>
 	 </ul>
  </nav>
 </div>
@@ -558,7 +558,7 @@ if(($jumpPage == 0 && $sendmail == 1) || ($jumpPage == 0 && ($confirmDsp == 0 &&
 	 <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
 		 <li itemprop="itemListElement" itemscope
 		 itemtype="https://schema.org/ListItem">
-		 <a itemprop="item" href="/">
+		 <a itemprop="item" href="./">
 			 <span itemprop="name">home</span>
 		 </a>
 		 <meta itemprop="position" content="1" />
@@ -617,7 +617,7 @@ if(($jumpPage == 0 && $sendmail == 1) || ($jumpPage == 0 && ($confirmDsp == 0 &&
 
         <!-- ページトップへ戻るボタン -->
         <p class="pagetop" style="display: block;">
-        <a href="#"><img src="/img/modoru.png"></a>
+        <a href="#"><img src="./img/modoru.png"></a>
         </p>
   </footer>
 
