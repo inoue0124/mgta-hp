@@ -257,7 +257,7 @@ else if($confirmDsp == 1){
 				 </ul>
 				 </ul>
 				 <ul class="mainmav">
-					 <li><a href="about.html">M-GTAとは</a></li>
+					 <li><a href="mgta.html">M-GTAとは</a></li>
 					 <li><a href="works.html">研究会の活動</a></li>
 					 <li><a href="intro.html">会員による研究の紹介</a></li>
 					 <li class="current"><a href="contact.html">入会・お問い合わせ</a></li>
@@ -276,7 +276,7 @@ else if($confirmDsp == 1){
  <nav class="pc-none drawer-nav accordion-container" role="navigation" id= "accordion">
 	 <ul class="drawer-menu">
 		 <li class="menu-item"><a href="./">HOME</a></li>
-		 <li class="menu-item"><a href="about.html">M-GTAとは</a></li>
+		 <li class="menu-item"><a href="mgta.html">M-GTAとは</a></li>
 	 <li class="menu-item"><a href="works.html">研究会の活動</a></li>
 	 <li class="menu-item"><a href="intro.html">会員による研究の紹介</a></li>
 	 <li class="menu-item"><a href="contact.html">入会・お問い合わせ</a></li>
@@ -319,7 +319,7 @@ else if($confirmDsp == 1){
 
 		 <li itemprop="itemListElement" itemscope
 			 itemtype="https://schema.org/ListItem">
-			 <a itemprop="item" href="about.html">
+			 <a itemprop="item" href="mgta.html">
 				 <span itemprop="name">入会・お問い合わせ</span>
 			 </a>
 			 <meta itemprop="position" content="2" />
@@ -369,7 +369,8 @@ else if($confirmDsp == 1){
     <div class="inner-mini">
       <nav class="footnav">
         <ul class="mainmav">
-          <li><a href="about.html">M-GTAとは</a></li>
+          <li><a href="about.html">研究会概要</a></li>
+          <li><a href="mgta.html">M-GTAとは</a></li>
           <li><a href="works.html">研究会の活動</a></li>
           <li><a href="intro.html">会員による研究の紹介</a></li>
           <li><a href="contact.html">入会・お問い合わせ</a></li>
@@ -504,7 +505,7 @@ if(($jumpPage == 0 && $sendmail == 1) || ($jumpPage == 0 && ($confirmDsp == 0 &&
 				 </ul>
 				 </ul>
 				 <ul class="mainmav">
-					 <li><a href="about.html">M-GTAとは</a></li>
+					 <li><a href="mgta.html">M-GTAとは</a></li>
 					 <li><a href="works.html">研究会の活動</a></li>
 					 <li><a href="intro.html">会員による研究の紹介</a></li>
 					 <li class="current"><a href="contact.html">入会・お問い合わせ</a></li>
@@ -523,7 +524,7 @@ if(($jumpPage == 0 && $sendmail == 1) || ($jumpPage == 0 && ($confirmDsp == 0 &&
  <nav class="pc-none drawer-nav accordion-container" role="navigation" id= "accordion">
 	 <ul class="drawer-menu">
 		 <li class="menu-item"><a href="./">HOME</a></li>
-		 <li class="menu-item"><a href="about.html">M-GTAとは</a></li>
+		 <li class="menu-item"><a href="mgta.html">M-GTAとは</a></li>
 	 <li class="menu-item"><a href="works.html">研究会の活動</a></li>
 	 <li class="menu-item"><a href="intro.html">会員による研究の紹介</a></li>
 	 <li class="menu-item"><a href="contact.html">入会・お問い合わせ</a></li>
@@ -566,7 +567,7 @@ if(($jumpPage == 0 && $sendmail == 1) || ($jumpPage == 0 && ($confirmDsp == 0 &&
 
 		 <li itemprop="itemListElement" itemscope
 			 itemtype="https://schema.org/ListItem">
-			 <a itemprop="item" href="about.html">
+			 <a itemprop="item" href="mgta.html">
 				 <span itemprop="name">入会・お問い合わせ</span>
 			 </a>
 			 <meta itemprop="position" content="2" />
@@ -599,7 +600,8 @@ if(($jumpPage == 0 && $sendmail == 1) || ($jumpPage == 0 && ($confirmDsp == 0 &&
     <div class="inner-mini">
       <nav class="footnav">
         <ul class="mainmav">
-          <li><a href="about.html">M-GTAとは</a></li>
+          <li><a href="about.html">研究会概要</a></li>
+          <li><a href="mgta.html">M-GTAとは</a></li>
           <li><a href="works.html">研究会の活動</a></li>
           <li><a href="intro.html">会員による研究の紹介</a></li>
           <li><a href="contact.html">入会・お問い合わせ</a></li>
