@@ -225,7 +225,7 @@ else if($confirmDsp == 1){
  <link rel="shortcut icon" href="img/favicon.ico">
  <script src="./js/jquery.colorbox.js"></script>
  <link href="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/css/drawer.min.css" rel="stylesheet" type="text/css" media="all">
- <link href="./css/style.min.css" rel="stylesheet" type="text/css" media="all">
+ <link href="./css/style.css" rel="stylesheet" type="text/css" media="all">
  <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
 </head>
 
@@ -473,7 +473,7 @@ if(($jumpPage == 0 && $sendmail == 1) || ($jumpPage == 0 && ($confirmDsp == 0 &&
  <link rel="shortcut icon" href="img/favicon.ico">
  <script src="./js/jquery.colorbox.js"></script>
  <link href="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/css/drawer.min.css" rel="stylesheet" type="text/css" media="all">
- <link href="./css/style.min.css" rel="stylesheet" type="text/css" media="all">
+ <link href="./css/style.css" rel="stylesheet" type="text/css" media="all">
  <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
 </head>
 
