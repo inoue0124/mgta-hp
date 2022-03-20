@@ -403,11 +403,8 @@
         return false;
       });
     });
-  </script>
-
-  <script>
-    jQuery(document).ready(function () {
-      jQuery('.drawer').drawer({
+    $(document).ready(function () {
+      $('.drawer').drawer({
         class: {
           nav: 'drawer-nav',
           toggle: 'drawer-toggle',
@@ -425,12 +422,9 @@
         showOverlay: true
       });
     });
-  </script>
-
-  <script>
-    jQuery(function () {
-      jQuery(window).scroll(function () {
-        jQuery('.effect-fade').each(function () {
+    $(function () {
+      $(window).scroll(function () {
+        $('.effect-fade').each(function () {
           var elemPos = $(this).offset().top;
           var scroll = $(window).scrollTop();
           var windowHeight = $(window).height();
