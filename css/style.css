@@ -9,7 +9,7 @@ img {
 .effect-fade {
   opacity: 0;
   -webkit-transform: translate(0, 45px);
-          transform: translate(0, 45px);
+  transform: translate(0, 45px);
   -webkit-transition: all 1200ms;
   transition: all 1200ms;
 }
@@ -17,7 +17,7 @@ img {
 .effect-fade.effect-scroll {
   opacity: 1;
   -webkit-transform: translate(0, 0);
-          transform: translate(0, 0);
+  transform: translate(0, 0);
 }
 
 body {
@@ -114,6 +114,13 @@ body {
   color: #000;
 }
 
+.link-btn span {
+  display: block;
+  border: 2px solid #000;
+  padding: 1rem;
+  color: #000;
+}
+
 .link-b3 {
   width: 90%;
   margin: 0 auto;
@@ -171,11 +178,11 @@ header .h1wrap > .inner-big {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
 @media screen and (max-width: 749px) {
@@ -251,8 +258,8 @@ header .top_nav {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
 }
 
 header .top_nav li a {
@@ -287,9 +294,9 @@ header .mainmav {
   display: flex;
   margin-top: 1rem;
   -ms-flex-pack: distribute;
-      justify-content: space-around;
+  justify-content: space-around;
   -ms-flex-line-pack: stretch;
-      align-content: stretch;
+  align-content: stretch;
 }
 
 header .mainmav li {
@@ -308,7 +315,7 @@ header .mainmav li .current a {
 header .mainmav li a {
   display: block;
   -webkit-transform: skewX(-150deg);
-          transform: skewX(-150deg);
+  transform: skewX(-150deg);
   font-weight: bold;
   font-size: 15px;
 }
@@ -343,7 +350,7 @@ article {
   width: 100%;
   z-index: 3;
   -webkit-box-shadow: 0 7px 6px -6px rgba(0, 0, 0, 0.1);
-          box-shadow: 0 7px 6px -6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 7px 6px -6px rgba(0, 0, 0, 0.1);
 }
 
 /*TOP*/
@@ -352,15 +359,15 @@ article {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   margin-bottom: 3rem;
 }
 
 @media screen and (max-width: 749px) {
   .wwd {
     -ms-flex-pack: distribute;
-        justify-content: space-around;
+    justify-content: space-around;
     margin-bottom: 3rem;
   }
 }
@@ -389,8 +396,8 @@ article {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
 @media screen and (max-width: 749px) {
@@ -476,7 +483,7 @@ article {
 }
 
 footer .pagetop {
-  position: absolute;
+  position: fixed;
   width: 80px;
   bottom: 50px;
   right: 40px;
@@ -484,7 +491,7 @@ footer .pagetop {
 
 @media screen and (max-width: 749px) {
   footer .pagetop {
-    bottom: 210px;
+    bottom: 50px;
     right: 5px;
     width: 60px;
   }
@@ -515,8 +522,8 @@ footer .footnav ul {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
 @media screen and (max-width: 749px) {
@@ -586,13 +593,13 @@ footer .footnav ul li a {
 
 .page .h1 {
   -webkit-margin-before: 0.67em;
-          margin-block-start: 0.67em;
+  margin-block-start: 0.67em;
   -webkit-margin-after: 0.67em;
-          margin-block-end: 0.67em;
+  margin-block-end: 0.67em;
   -webkit-margin-start: 0px;
-          margin-inline-start: 0px;
+  margin-inline-start: 0px;
   -webkit-margin-end: 0px;
-          margin-inline-end: 0px;
+  margin-inline-end: 0px;
   font-weight: bold;
 }
 
@@ -609,19 +616,19 @@ footer .footnav ul li a {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
   -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
 }
 
 @media screen and (max-width: 749px) {
   .contens {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
-        -ms-flex-direction: column-reverse;
-            flex-direction: column-reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
   }
 }
 
@@ -728,20 +735,20 @@ footer .footnav ul li a {
 }
 
 .main table {
-  margin: 4rem 0;
+  margin: 2rem 0;
   border-collapse: collapse;
   border: 1px solid #ccc;
   font-size: 14px;
 }
 
 .main table th {
-  padding: 1rem 3rem;
+  padding: 1rem 1rem;
   border: 1px solid #ccc;
   background-color: #f9f8f4;
 }
 
 .main table td {
-  padding: 1rem 3rem;
+  padding: 1rem 1rem;
   border: 1px solid #ccc;
 }
 
@@ -866,7 +873,9 @@ input.area,
 textarea {
   font-size: 16px;
   padding-left: 30px;
-  font-family: "Avenir", "Helvetica Neue", "Helvetica", "Arial", "Hiragino Sans", "ヒラギノ角ゴシック", YuGothic, "Yu Gothic", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic";
+  font-family: "Avenir", "Helvetica Neue", "Helvetica", "Arial", "Hiragino Sans",
+    "ヒラギノ角ゴシック", YuGothic, "Yu Gothic", "メイリオ", Meiryo,
+    "ＭＳ Ｐゴシック", "MS PGothic";
 }
 
 p.submit {
@@ -877,10 +886,12 @@ p.submit input {
   background-color: #f7921e;
   border: 0px;
   -webkit-box-shadow: -1px 1px 2px #000;
-          box-shadow: -1px 1px 2px #000;
+  box-shadow: -1px 1px 2px #000;
   text-align: center;
   margin: 10px;
-  font-family: "Avenir", "Helvetica Neue", "Helvetica", "Arial", "Hiragino Sans", "ヒラギノ角ゴシック", YuGothic, "Yu Gothic", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic";
+  font-family: "Avenir", "Helvetica Neue", "Helvetica", "Arial", "Hiragino Sans",
+    "ヒラギノ角ゴシック", YuGothic, "Yu Gothic", "メイリオ", Meiryo,
+    "ＭＳ Ｐゴシック", "MS PGothic";
   color: #fff;
   font-size: 17px;
   font-weight: bold;
