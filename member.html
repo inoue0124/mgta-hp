@@ -2,9 +2,7 @@
 <html lang="ja">
 
 <head>
-
   <meta charset="UTF-8">
-
   <meta name="description" content="M-GTA研究会（実践的グランデッド・セオリー研究会）">
   <meta name="keywords" content="M-GTA研究,実践的グランデッド・セオリー研究会">
   <title>会員専用ページ|M-GTA研究会（実践的グランデッド・セオリー研究会）</title>
@@ -90,7 +88,7 @@
             <h2>CONTENTS MENU</h2>
             <ul>
               <li class="clearfix"><a href="#a">ニューズレター<i class="fas fa-chevron-right"></i></a></li>
-              <li class="clearfix"><a href="#b">研究例登録フォーム<i class="fas fa-chevron-right"></i></a></li>
+              <li class="clearfix"><a href="#b">研究成果登録フォーム<i class="fas fa-chevron-right"></i></a></li>
             </ul>
           </nav>
           <div class="contact">
@@ -416,9 +414,97 @@
               </table>
             </div>
           </section>
+
           <section id="b">
-            <h2 class="page-h2">研究例登録フォーム</h2>
-            <p>現在制作中　少々お待ちください。</p>
+            <h2 class="page-h2">研究成果登録フォーム</h2>
+            <div class="contener">
+              <p class="page-p">M-GTAを用いた ①著書刊行 および ②学位取得 をされた会員は、下記よりご報告ください。</p>
+              <p class="page-p">会員による研究成果として「会員による研究の紹介」に掲載いたします。</p>
+              <p class="page-p">以下の項目にご入力の上、画面下部の「確認画面に進む」ボタンをクリックしてください。</p>
+              <div class="mail">
+                <select name="申込種別" id="type-selection">
+                  <option value="選択してください">選択してください</option>
+                  <option value="author">①著書報告</option>
+                  <option value="degree">②学位取得報告</option>
+                </select>
+                <form method="post" action="mail.php">
+
+                  <div id="form-author" style="display:none;">
+                    <table class="formtable">
+                      <tr>
+                        <th>会員氏名<span>❇︎</span></th>
+                        <td><input class="area" type="text" name="会員氏名" required> </td>
+                      </tr>
+                      <tr>
+                        <th>著者名<span>❇︎</span></th>
+                        <td><input class="area" type="text" name="著者名" required> </td>
+                      </tr>
+                      <tr>
+                        <th>著書名<span>❇︎</span></th>
+                        <td><input class="area" type="text" name="著書名" required> </td>
+                      </tr>
+                      <tr>
+                        <th>出版社<span>❇︎</span></th>
+                        <td><input class="area" type="text" name="出版社" required></td>
+                      </tr>
+                      <tr>
+                        <th>刊行年<span>❇︎</span></th>
+                        <td><input class="area" type="text" name="刊行年" required></td>
+                      </tr>
+                      <tr>
+                        <th>メールアドレス<span>❇︎</span></th>
+                        <td><input class="area" type="text" name="Email" required></td>
+                      </tr>
+                    </table>
+                    <p class="submit">
+                      <input type="submit" value="　 確認 　" />　<input type="reset" value="リセット" />
+                    </p>
+                  </div>
+
+                  <div id="form-degree" style="display:none;">
+                    <table class="formtable">
+                      <tr>
+                        <th>会員氏名 (日本語/英語)<span>❇︎</span></th>
+                        <td><input class="area" type="text" name="会員氏名 (日本語/英語)" required></td>
+                      </tr>
+                      <tr>
+                        <th>研究領域 (選択式)<span>❇︎</span></th>
+                        <td>
+                          <select class="area" name="研究領域" id="type-selection">
+                            <option value="選択してください">選択してください</option>
+                            <option value="看護学">看護学</option>
+                            <option value="医学">医学</option>
+                          </select>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>学術論文名 (日本語/英語)<span>❇︎</span></th>
+                        <td><input class="area" type="text" name="学術論文名 (日本語/英語)" required> </td>
+                      </tr>
+                      <tr>
+                        <th>学位授与大学 (日本語/英語)<span>❇︎</span></th>
+                        <td><input class="area" type="text" name="学位授与大学 (日本語/英語)" required></td>
+                      </tr>
+                      <tr>
+                        <th>取得学位 (日本語/英語) 例)博士(看護学)<span>❇︎</span></th>
+                        <td><input class="area" type="text" name="取得学位 (日本語/英語)   例)博士(看護学)" required></td>
+                      </tr>
+                      <tr>
+                        <th>学位取得年月 例)2022/03<span>❇︎</span></th>
+                        <td><input class="area" type="text" name="学位取得年" required></td>
+                      </tr>
+                      <tr>
+                        <th>メールアドレス<span>❇︎</span></th>
+                        <td><input class="area" type="text" name="Email" required></td>
+                      </tr>
+                    </table>
+                    <p class="submit">
+                      <input type="submit" value="　 確認 　" />　<input type="reset" value="リセット" />
+                    </p>
+                  </div>
+                </form>
+              </div>
+            </div>
           </section>
         </div>
       </div>
@@ -459,12 +545,8 @@
         return false;
       });
     });
-  </script>
-
-
-  <script>
-    jQuery(document).ready(function () {
-      jQuery('.drawer').drawer({
+    $(document).ready(function () {
+      $('.drawer').drawer({
         class: {
           nav: 'drawer-nav',
           toggle: 'drawer-toggle',
@@ -482,12 +564,9 @@
         showOverlay: true
       });
     });
-  </script>
-
-  <script>
-    jQuery(function () {
-      jQuery(window).scroll(function () {
-        jQuery('.effect-fade').each(function () {
+    $(function () {
+      $(window).scroll(function () {
+        $('.effect-fade').each(function () {
           var elemPos = $(this).offset().top;
           var scroll = $(window).scrollTop();
           var windowHeight = $(window).height();
@@ -497,6 +576,19 @@
         });
       });
     });
+    $("#type-selection").change(function () {
+      if ($("#type-selection").val() === "author") {
+        $("#form-degree").hide()
+        $("#form-author").show()
+      } else if ($("#type-selection").val() === "degree") {
+        $("#form-author").hide()
+        $("#form-degree").show()
+      } else {
+        $("#form-author").hide()
+        $("#form-degree").hide(
+        )
+      }
+    })
   </script>
 </body>
 

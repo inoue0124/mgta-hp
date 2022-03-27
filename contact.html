@@ -40,7 +40,6 @@
             </div>
           </div>
         </div>
-
         <div class="mainnav_wrap">
           <div class="inner-big">
             <nav>
@@ -183,69 +182,69 @@
                 <form method="post" action="mail.php">
                   <table class="formtable">
                     <tr>
-                      <th>ご用件</th>
-                      <td><select name="ご用件">
+                      <th>ご用件<span>❇︎</span></th>
+                      <td>
+                        <select name="ご用件" id="type-selection" required>
                           <option value="選択してください"></option>
                           <option value="お問い合わせ">お問い合わせ</option>
                           <option value="入会希望">入会希望</option>
-                        </select></td>
+                        </select>
+                      </td>
                     </tr>
                     <tr>
-                      <th>お名前</th>
-                      <td><input class="area" type="text" name="お名前"> </td>
+                      <th>お名前<span>❇︎</span></th>
+                      <td><input class="area" type="text" name="お名前" required> </td>
                     </tr>
                     <tr>
-                      <th>フリガナ</th>
-                      <td><input class="area" type="text" name="フリガナ"> </td>
+                      <th>フリガナ<span>❇︎</span></th>
+                      <td><input class="area" type="text" name="フリガナ" required> </td>
                     </tr>
                     <tr>
-                      <th>所属</th>
-                      <td><input class="area" type="text" name="所属"> </td>
+                      <th>所属<span>❇︎</span></th>
+                      <td><input class="area" type="text" name="所属" required> </td>
                     </tr>
                     <tr>
-                      <th>メールアドレス</th>
-                      <td><input class="area" type="text" name="Email"></td>
+                      <th>メールアドレス<span>❇︎</span></th>
+                      <td><input class="area" type="text" name="Email" required></td>
                     </tr>
-
                     <tr>
                       <th>電話番号</th>
                       <td><input class="area" type="text" name="電話番号"></td>
                     </tr>
-
                     <tr>
-                      <th>お問い合わせ内容／備考</th>
-                      <td><textarea name="お問い合わせ内容"></textarea></td>
+                      <th>お問い合わせ内容／備考<span>❇︎</span></th>
+                      <td><textarea name="お問い合わせ内容" required></textarea></td>
                     </tr>
                   </table>
 
-                  <p>※入会希望の方は以下にもご記入ください</p>
-                  <table class="formtable">
-
-                    <tr>
-                      <th>郵送希望先　自宅/所属先</th>
-                      <td><input name="郵送希望先" type="checkbox" value="自宅">自宅
-                        <input name="郵送希望先" type="checkbox" value="所属先">所属
-                        <input name="郵送希望先" type="checkbox" value="その他">その他
-                      </td>
-                    <tr>
-                    <tr>
-                      <th>郵送希望先郵便番号</th>
-                      <td>〒<input class="post" type="text" name="郵送希望先郵便番号1">-
-                        <input class="post" type="text" name="郵送希望先郵便番号2">
-                      </td>
-                    </tr>
-                    <tr>
-                      <th>郵送希望先住所</th>
-                      <td><input class="area" type="text" name="郵送希望先住所"></td>
-                    </tr>
-                    <tr>
-                      <th>所属機関・部署名／建物名・部屋番号</th>
-                      <td><input class="area" type="text" name="郵送希望先住所"></td>
-                    </tr>
-
-
-                  </table>
-                  <p align="center" class="submit">
+                  <div id="form-register" style="display:none;">
+                    <p>※入会希望の方は以下にもご記入ください</p>
+                    <table class="formtable">
+                      <tr>
+                        <th>郵送希望先　自宅/所属先<span>❇︎</span></th>
+                        <td>
+                          <input name="郵送希望先" type="radio" value="自宅" required>自宅
+                          <input name="郵送希望先" type="radio" value="所属先">所属
+                          <input name="郵送希望先" type="radio" value="その他">その他
+                        </td>
+                      <tr>
+                      <tr>
+                        <th>郵送希望先郵便番号<span>❇︎</span></th>
+                        <td>〒<input class="post" type="text" name="郵送希望先郵便番号1" required>-
+                          <input class="post" type="text" name="郵送希望先郵便番号2" required>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>郵送希望先住所<span>❇︎</span></th>
+                        <td><input class="area" type="text" name="郵送希望先住所" required></td>
+                      </tr>
+                      <tr>
+                        <th>所属機関・部署名／建物名・部屋番号<span>❇︎</span></th>
+                        <td><input class="area" type="text" name="郵送希望先住所" required></td>
+                      </tr>
+                    </table>
+                  </div>
+                  <p class="submit">
                     <input type="submit" value="　 確認 　" />　<input type="reset" value="リセット" />
                   </p>
                 </form>
@@ -376,12 +375,8 @@
         return false;
       });
     });
-  </script>
-
-
-  <script>
-    jQuery(document).ready(function () {
-      jQuery('.drawer').drawer({
+    $(document).ready(function () {
+      $('.drawer').drawer({
         class: {
           nav: 'drawer-nav',
           toggle: 'drawer-toggle',
@@ -399,12 +394,9 @@
         showOverlay: true
       });
     });
-  </script>
-
-  <script>
-    jQuery(function () {
-      jQuery(window).scroll(function () {
-        jQuery('.effect-fade').each(function () {
+    $(function () {
+      $(window).scroll(function () {
+        $('.effect-fade').each(function () {
           var elemPos = $(this).offset().top;
           var scroll = $(window).scrollTop();
           var windowHeight = $(window).height();
@@ -414,6 +406,21 @@
         });
       });
     });
+    $("#type-selection").change(function () {
+      if ($("#type-selection").val() === "入会希望") {
+        $("#form-register").show()
+        setRequired(true)
+      } else {
+        $("#form-register").hide()
+        setRequired(false)
+      }
+    })
+    function setRequired(val) {
+      input = $("#form-register input")
+      for (i = 0; i < input.length; i++) {
+        input[i].required = val;
+      }
+    }
   </script>
 </body>
 
