@@ -422,38 +422,37 @@
               <p class="page-p">会員による研究成果として「会員による研究の紹介」に掲載いたします。</p>
               <p class="page-p">以下の項目にご入力の上、画面下部の「確認画面に進む」ボタンをクリックしてください。</p>
               <div class="mail">
-                <select name="申込種別" id="type-selection">
-                  <option value="選択してください">選択してください</option>
-                  <option value="author">①著書報告</option>
-                  <option value="degree">②学位取得報告</option>
-                </select>
-                <form method="post" action="mail.php">
-
+                <form method="post" action="register.php">
+                  <select name="申込種別" id="type-selection">
+                    <option value="選択してください">選択してください</option>
+                    <option value="author">①著書報告</option>
+                    <option value="degree">②学位取得報告</option>
+                  </select>
                   <div id="form-author" style="display:none;">
                     <table class="formtable">
                       <tr>
                         <th>会員氏名<span>❇︎</span></th>
-                        <td><input class="area" type="text" name="会員氏名" required> </td>
+                        <td><input class="area" type="text" name="会員氏名　" required disabled></td>
                       </tr>
                       <tr>
                         <th>著者名<span>❇︎</span></th>
-                        <td><input class="area" type="text" name="著者名" required> </td>
+                        <td><input class="area" type="text" name="著者名" required disabled></td>
                       </tr>
                       <tr>
                         <th>著書名<span>❇︎</span></th>
-                        <td><input class="area" type="text" name="著書名" required> </td>
+                        <td><input class="area" type="text" name="著書名" required disabled> </td>
                       </tr>
                       <tr>
                         <th>出版社<span>❇︎</span></th>
-                        <td><input class="area" type="text" name="出版社" required></td>
+                        <td><input class="area" type="text" name="出版社" required disabled></td>
                       </tr>
                       <tr>
                         <th>刊行年<span>❇︎</span></th>
-                        <td><input class="area" type="text" name="刊行年" required></td>
+                        <td><input class="area" type="text" name="刊行年" required disabled></td>
                       </tr>
                       <tr>
                         <th>メールアドレス<span>❇︎</span></th>
-                        <td><input class="area" type="text" name="Email" required></td>
+                        <td><input class="area" type="text" name="Email　" required disabled></td>
                       </tr>
                     </table>
                     <p class="submit">
@@ -465,12 +464,12 @@
                     <table class="formtable">
                       <tr>
                         <th>会員氏名 (日本語/英語)<span>❇︎</span></th>
-                        <td><input class="area" type="text" name="会員氏名 (日本語/英語)" required></td>
+                        <td><input class="area" type="text" name="会員氏名" required disabled></td>
                       </tr>
                       <tr>
                         <th>研究領域<span>❇︎</span></th>
                         <td>
-                          <select class="area" name="研究領域" id="type-selection">
+                          <select class="area" name="研究領域" id="type-selection" required disabled>
                             <option value="選択してください">選択してください</option>
                             <option value="看護学">看護学</option>
                             <option value="医学">医学</option>
@@ -479,23 +478,23 @@
                       </tr>
                       <tr>
                         <th>学術論文名 (日本語/英語)<span>❇︎</span></th>
-                        <td><input class="area" type="text" name="学術論文名 (日本語/英語)" required> </td>
+                        <td><input class="area" type="text" name="学術論文名" required disabled> </td>
                       </tr>
                       <tr>
                         <th>学位授与大学 (日本語/英語)<span>❇︎</span></th>
-                        <td><input class="area" type="text" name="学位授与大学 (日本語/英語)" required></td>
+                        <td><input class="area" type="text" name="学位授与大学" required disabled></td>
                       </tr>
                       <tr>
                         <th>取得学位 (日本語/英語) 例)博士(看護学)<span>❇︎</span></th>
-                        <td><input class="area" type="text" name="取得学位 (日本語/英語)   例)博士(看護学)" required></td>
+                        <td><input class="area" type="text" name="取得学位" required disabled></td>
                       </tr>
                       <tr>
                         <th>学位取得年月 例)2022/03<span>❇︎</span></th>
-                        <td><input class="area" type="text" name="学位取得年" required></td>
+                        <td><input class="area" type="text" name="学位取得年" required disabled></td>
                       </tr>
                       <tr>
                         <th>メールアドレス<span>❇︎</span></th>
-                        <td><input class="area" type="text" name="Email" required></td>
+                        <td><input class="area" type="text" name="Email" required disabled></td>
                       </tr>
                     </table>
                     <p class="submit">
@@ -579,16 +578,33 @@
     $("#type-selection").change(function () {
       if ($("#type-selection").val() === "author") {
         $("#form-degree").hide()
+        setRequired("#form-degree", false)
         $("#form-author").show()
+        setRequired("#form-author", true)
       } else if ($("#type-selection").val() === "degree") {
-        $("#form-author").hide()
         $("#form-degree").show()
+        setRequired("#form-degree", true)
+        $("#form-author").hide()
+        setRequired("#form-author", false)
       } else {
         $("#form-author").hide()
-        $("#form-degree").hide(
-        )
+        $("#form-degree").hide()
+        setRequired("#form-author", false)
+        setRequired("#form-degree", true)
       }
     })
+    function setRequired(form_id, val) {
+      input = $(`${form_id} input`)
+      for (i = 0; i < input.length; i++) {
+        input[i].required = val;
+        input[i].disabled = !val;
+      }
+      select = $(`${form_id} select`)
+      for (i = 0; i < select.length; i++) {
+        select[i].required = val;
+        select[i].disabled = !val;
+      }
+    }
   </script>
 </body>
 

@@ -223,24 +223,24 @@
                       <tr>
                         <th>郵送希望先　自宅/所属先<span>❇︎</span></th>
                         <td>
-                          <input name="郵送希望先" type="radio" value="自宅" required>自宅
+                          <input name="郵送希望先" type="radio" value="自宅" required disabled>自宅
                           <input name="郵送希望先" type="radio" value="所属先">所属
                           <input name="郵送希望先" type="radio" value="その他">その他
                         </td>
                       <tr>
                       <tr>
                         <th>郵送希望先郵便番号<span>❇︎</span></th>
-                        <td>〒<input class="post" type="text" name="郵送希望先郵便番号1" required>-
-                          <input class="post" type="text" name="郵送希望先郵便番号2" required>
+                        <td>〒<input class="post" type="text" name="郵送希望先郵便番号1" required disabled>-
+                          <input class="post" type="text" name="郵送希望先郵便番号2" required disabled>
                         </td>
                       </tr>
                       <tr>
                         <th>郵送希望先住所<span>❇︎</span></th>
-                        <td><input class="area" type="text" name="郵送希望先住所" required></td>
+                        <td><input class="area" type="text" name="郵送希望先住所" required disabled></td>
                       </tr>
                       <tr>
                         <th>所属機関・部署名／建物名・部屋番号<span>❇︎</span></th>
-                        <td><input class="area" type="text" name="郵送希望先住所" required></td>
+                        <td><input class="area" type="text" name="郵送希望先住所" required disabled></td>
                       </tr>
                     </table>
                   </div>
@@ -419,6 +419,12 @@
       input = $("#form-register input")
       for (i = 0; i < input.length; i++) {
         input[i].required = val;
+        input[i].disabled = !val;
+      }
+      select = $("#form-register select")
+      for (i = 0; i < select.length; i++) {
+        select[i].required = val;
+        select[i].disabled = !val;
       }
     }
   </script>

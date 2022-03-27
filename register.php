@@ -21,13 +21,14 @@ if (version_compare(PHP_VERSION, '5.1.0', '>=')) {//PHP5.1.0以上の場合の�
 }
 
 //サイトのトップページのURL　※デフォルトでは送信完了後に「トップページへ戻る」ボタンが表示されますので
-$site_top = "https://m-gta.jp/";
+$site_top = "./member.html";
 
 // 管理者メールアドレス ※メールを受け取るメールアドレス(複数指定する場合は「,」で区切ってください 例 $to = "aa@aa.aa,bb@bb.bb";)
-$to = "office@m-gta.jp,info@m-eights.com";
+// $to = "office@m-gta.jp,info@m-eights.com";
+$to = "inoue.inolabo@gmail.com";
 
 //フォームのメールアドレス入力箇所のname属性の値（name="○○"　の○○部分）
-$Email = "Email";
+$Email = "Email ";
 
 /*------------------------------------------------------------------------------------------------
 以下スパム防止のための設定　
@@ -74,7 +75,9 @@ $requireCheck = 1;
 /* 必須入力項目(入力フォームで指定したname属性の値を指定してください。（上記で1を設定した場合のみ）
 値はシングルクォーテーションで囲み、複数の場合はカンマで区切ってください。フォーム側と順番を合わせると良いです。
 配列の形「name="○○[]"」の場合には必ず後ろの[]を取ったものを指定して下さい。*/
-$require = array('お名前','Email');
+$require = $_POST['申込種別'] == 'author' 
+	? array('会員氏名　','著者名','著書名','出版社','刊行年','Email　')
+	: array('会員氏名','研究領域','学術論文名','学位授与大学','取得学位','学位取得年','Email');
 
 
 //----------------------------------------------------------------------
@@ -141,7 +144,7 @@ $hankaku = 0;
 //全角英数字→半角変換を行う項目のname属性の値（name="○○"の「○○」部分）
 //※複数の場合にはカンマで区切って下さい。（上記で「1」を指定した場合のみ有効）
 //配列の形「name="○○[]"」の場合には必ず後ろの[]を取ったものを指定して下さい。
-$hankaku_array = array('電話番号','金額');
+$hankaku_array = array();
 
 
 //------------------------------- 任意設定ここまで ---------------------------------------------
@@ -233,7 +236,6 @@ else if($confirmDsp == 1){
  <main>
 <header>
  <div class="fixnav">
-
 		 <div class="h1wrap">
 			 <div class="inner-big">
 		 <p class="h1"><a href="./">M-GTA研究会<span>（実践的グランデッド・セオリー研究会）</span></a></p>
@@ -309,46 +311,30 @@ else if($confirmDsp == 1){
  <!--サイドメニューここまで-->
  <!--メインコンテンツここから-->
  <div class="main">
-	 <!--パンくずリスト-->
-	 <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
-		 <li itemprop="itemListElement" itemscope
-		 itemtype="https://schema.org/ListItem">
-		 <a itemprop="item" href="./">
-			 <span itemprop="name">home</span>
-		 </a>
-		 <meta itemprop="position" content="1" />
-		 </li>
-
-		 <li itemprop="itemListElement" itemscope
-			 itemtype="https://schema.org/ListItem">
-			 <a itemprop="item" href="mgta.html">
-				 <span itemprop="name">入会・お問い合わせ</span>
-			 </a>
-			 <meta itemprop="position" content="2" />
-		 </li>
-	 </ol>
 
 <!-- ▲ Headerやその他コンテンツなど　※自由に編集可 ▲-->
 
 <!-- ▼************ 送信内容表示部　※編集は自己責任で ************ ▼-->
 <div id="formWrap">
 <?php if($empty_flag == 1){ ?>
-<div align="center">
+<div>
 <h4>入力にエラーがあります。下記をご確認の上「戻る」ボタンにて修正をお願い致します。</h4>
 <?php echo $errm; ?><br /><br /><input type="button" value=" 前画面に戻る " onClick="history.back()">
 </div>
 <?php }else{ ?>
-<h3>確認画面</h3>
-<p align="center">以下の内容で間違いがなければ、「送信する」ボタンを押してください。</p>
+<h2 class="page-h2">確認画面</h2>
+<p>以下の内容で間違いがなければ、「送信する」ボタンを押してください。</p>
+<div class="mail">
 <form action="<?php echo h($_SERVER['SCRIPT_NAME']); ?>" method="POST">
-<table class="formTable">
+<table class="formtable">
 <?php echo confirmOutput($_POST);//入力内容を表示?>
 </table>
-<p align="center"><input type="hidden" name="mail_set" value="confirm_submit">
+<p class="submit"><input type="hidden" name="mail_set" value="confirm_submit">
 <input type="hidden" name="httpReferer" value="<?php echo h($_SERVER['HTTP_REFERER']);?>">
 <input type="submit" value="　送信する　">
 <input type="button" value="前画面に戻る" onClick="history.back()"></p>
 </form>
+</div>
 <?php } ?>
 </div><!-- /formWrap -->
 </section>
@@ -559,34 +545,17 @@ if(($jumpPage == 0 && $sendmail == 1) || ($jumpPage == 0 && ($confirmDsp == 0 &&
  <!--サイドメニューここまで-->
  <!--メインコンテンツここから-->
  <div class="main">
-	 <!--パンくずリスト-->
-	 <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
-		 <li itemprop="itemListElement" itemscope
-		 itemtype="https://schema.org/ListItem">
-		 <a itemprop="item" href="./">
-			 <span itemprop="name">home</span>
-		 </a>
-		 <meta itemprop="position" content="1" />
-		 </li>
-
-		 <li itemprop="itemListElement" itemscope
-			 itemtype="https://schema.org/ListItem">
-			 <a itemprop="item" href="mgta.html">
-				 <span itemprop="name">入会・お問い合わせ</span>
-			 </a>
-			 <meta itemprop="position" content="2" />
-		 </li>
-	 </ol>
-
 
 <?php if($empty_flag == 1){ ?>
-<h4>入力にエラーがあります。下記をご確認の上「戻る」ボタンにて修正をお願い致します。</h4>
+<p>入力にエラーがあります。下記をご確認の上「戻る」ボタンにて修正をお願い致します。</p>
 <div style="color:red"><?php echo $errm; ?></div>
 <br /><br /><input type="button" value=" 前画面に戻る " onClick="history.back()">
 
 <?php }else{ ?>
-送信ありがとうございました。<br />
-送信は正常に完了しました。<br /><br />
+<div class="container" style="margin: 16px 0;">
+<p>送信ありがとうございました。</p>
+<p>送信は正常に完了しました。</p>
+</div>
 <a href="<?php echo $site_top ;?>">トップページへ戻る&raquo;</a>
 
 
@@ -743,8 +712,6 @@ function postToMail($arr){
 			$out = rtrim($out,', ');
 
 		}else{ $out = $val; }//チェックボックス（配列）追記ここまで
-		if(get_magic_quotes_gpc()) { $out = stripslashes($out); }
-
 		//全角→半角変換
 		if($hankaku == 1){
 			$out = zenkaku2hankaku($key,$out,$hankaku_array);
@@ -773,7 +740,6 @@ function confirmOutput($arr){
 			$out = rtrim($out,', ');
 
 		}else{ $out = $val; }//チェックボックス（配列）追記ここまで
-		if(get_magic_quotes_gpc()) { $out = stripslashes($out); }
 		$out = nl2br(h($out));//※追記 改行コードを<br>タグに変換
 		$key = h($key);
 
