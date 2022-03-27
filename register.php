@@ -21,7 +21,7 @@ if (version_compare(PHP_VERSION, '5.1.0', '>=')) {//PHP5.1.0以上の場合の�
 }
 
 //サイトのトップページのURL　※デフォルトでは送信完了後に「トップページへ戻る」ボタンが表示されますので
-$site_top = "./member.html";
+$site_top = "./member.php";
 
 // 管理者メールアドレス ※メールを受け取るメールアドレス(複数指定する場合は「,」で区切ってください 例 $to = "aa@aa.aa,bb@bb.bb";)
 // $to = "office@m-gta.jp,info@m-eights.com";
@@ -264,7 +264,7 @@ else if($confirmDsp == 1){
 				   <li><a href="works.html">研究会の活動</a></li>
 				   <li><a href="intro.html">会員による研究の紹介</a></li>
 				   <li><a href="contact.html">入会・お問い合わせ</a></li>
-				   <li><a href="member.html">会員専用ページ</a></li>
+				   <li><a href="member.php">会員専用ページ</a></li>
 				 </ul>
 			 </nav>
 		 </div>
@@ -284,7 +284,7 @@ else if($confirmDsp == 1){
 		<li class="menu-item"><a href="works.html">研究会の活動</a></li>
 		<li class="menu-item"><a href="intro.html">会員による研究の紹介</a></li>
 		<li class="menu-item"><a href="contact.html">入会・お問い合わせ</a></li>
-		<li class="menu-item"><a href="member.html">会員専用ページ</a></li>
+		<li class="menu-item"><a href="member.php">会員専用ページ</a></li>
 		<li class="menu-item"><a href="./en/" target="_blank">English Site</a></li>
 	 </ul>
  </nav>
@@ -298,8 +298,8 @@ else if($confirmDsp == 1){
 	 <nav class="side-nav">
 		 <h2>CONTENTS MENU</h2>
 		 <ul>
-		   <li class="clearfix"><a href="./member.html#a">ニューズレター<i class="fas fa-chevron-right"></i></a></li>
-           <li class="clearfix"><a href="./member.html#b">研究成果登録フォーム<i class="fas fa-chevron-right"></i></a></li>
+		   <li class="clearfix"><a href="./member.php#a">ニューズレター<i class="fas fa-chevron-right"></i></a></li>
+           <li class="clearfix"><a href="./member.php#b">研究成果登録フォーム<i class="fas fa-chevron-right"></i></a></li>
 		 </ul>
 	 </nav>
 	 <div class="contact">
@@ -362,7 +362,7 @@ else if($confirmDsp == 1){
           <li><a href="works.html">研究会の活動</a></li>
           <li><a href="intro.html">会員による研究の紹介</a></li>
           <li><a href="contact.html">入会・お問い合わせ</a></li>
-          <li><a href="member.html">会員専用ページ</a></li>
+          <li><a href="member.php">会員専用ページ</a></li>
         </ul>
       </nav>
       <p class="bottom-name">M-GTA研究会</p>
@@ -498,7 +498,7 @@ if(($jumpPage == 0 && $sendmail == 1) || ($jumpPage == 0 && ($confirmDsp == 0 &&
 				   <li><a href="works.html">研究会の活動</a></li>
 				   <li><a href="intro.html">会員による研究の紹介</a></li>
 				   <li><a href="contact.html">入会・お問い合わせ</a></li>
-				   <li><a href="member.html">会員専用ページ</a></li>
+				   <li><a href="member.php">会員専用ページ</a></li>
 				 </ul>
 			 </nav>
 		 </div>
@@ -518,7 +518,7 @@ if(($jumpPage == 0 && $sendmail == 1) || ($jumpPage == 0 && ($confirmDsp == 0 &&
         <li class="menu-item"><a href="works.html">研究会の活動</a></li>
         <li class="menu-item"><a href="intro.html">会員による研究の紹介</a></li>
         <li class="menu-item"><a href="contact.html">入会・お問い合わせ</a></li>
-        <li class="menu-item"><a href="member.html">会員専用ページ</a></li>
+        <li class="menu-item"><a href="member.php">会員専用ページ</a></li>
         <li class="menu-item"><a href="./en/" target="_blank">English Site</a></li>
 	 </ul>
  </nav>
@@ -532,8 +532,8 @@ if(($jumpPage == 0 && $sendmail == 1) || ($jumpPage == 0 && ($confirmDsp == 0 &&
 	 <nav class="side-nav">
 		 <h2>CONTENTS MENU</h2>
 		 <ul>
-		 	<li class="clearfix"><a href="./member.html#a">ニューズレター<i class="fas fa-chevron-right"></i></a></li>
-            <li class="clearfix"><a href="./member.html#b">研究成果登録フォーム<i class="fas fa-chevron-right"></i></a></li>
+		 	<li class="clearfix"><a href="./member.php#a">ニューズレター<i class="fas fa-chevron-right"></i></a></li>
+            <li class="clearfix"><a href="./member.php#b">研究成果登録フォーム<i class="fas fa-chevron-right"></i></a></li>
 		 </ul>
 	 </nav>
 	 <div class="contact">
@@ -578,7 +578,7 @@ if(($jumpPage == 0 && $sendmail == 1) || ($jumpPage == 0 && ($confirmDsp == 0 &&
           <li><a href="works.html">研究会の活動</a></li>
           <li><a href="intro.html">会員による研究の紹介</a></li>
           <li><a href="contact.html">入会・お問い合わせ</a></li>
-          <li><a href="member.html">会員専用ページ</a></li>
+          <li><a href="member.php">会員専用ページ</a></li>
         </ul>
       </nav>
       <p class="bottom-name">M-GTA研究会</p>

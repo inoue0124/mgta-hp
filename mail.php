@@ -262,7 +262,7 @@ else if($confirmDsp == 1){
 					 <li><a href="works.html">研究会の活動</a></li>
 					 <li><a href="intro.html">会員による研究の紹介</a></li>
 					 <li class="current"><a href="contact.html">入会・お問い合わせ</a></li>
-					 <li><a href="member.html">会員専用ページ</a></li>
+					 <li><a href="member.php">会員専用ページ</a></li>
 				 </ul>
 			 </nav>
 		 </div>
@@ -281,7 +281,7 @@ else if($confirmDsp == 1){
 	 <li class="menu-item"><a href="works.html">研究会の活動</a></li>
 	 <li class="menu-item"><a href="intro.html">会員による研究の紹介</a></li>
 	 <li class="menu-item"><a href="contact.html">入会・お問い合わせ</a></li>
-	 <li class="menu-item"><a href="member.html">会員専用ページ</a></li>
+	 <li class="menu-item"><a href="member.php">会員専用ページ</a></li>
 	 <li class="menu-item"><a href="./en/" target="_blank">English Site</a></li>
 	 </ul>
  </nav>
@@ -359,7 +359,7 @@ else if($confirmDsp == 1){
           <li><a href="works.html">研究会の活動</a></li>
           <li><a href="intro.html">会員による研究の紹介</a></li>
           <li><a href="contact.html">入会・お問い合わせ</a></li>
-          <li><a href="member.html">会員専用ページ</a></li>
+          <li><a href="member.php">会員専用ページ</a></li>
         </ul>
       </nav>
       <p class="bottom-name">M-GTA研究会</p>
@@ -494,7 +494,7 @@ if(($jumpPage == 0 && $sendmail == 1) || ($jumpPage == 0 && ($confirmDsp == 0 &&
 					 <li><a href="works.html">研究会の活動</a></li>
 					 <li><a href="intro.html">会員による研究の紹介</a></li>
 					 <li class="current"><a href="contact.html">入会・お問い合わせ</a></li>
-					 <li><a href="member.html">会員専用ページ</a></li>
+					 <li><a href="member.php">会員専用ページ</a></li>
 				 </ul>
 			 </nav>
 		 </div>
@@ -513,7 +513,7 @@ if(($jumpPage == 0 && $sendmail == 1) || ($jumpPage == 0 && ($confirmDsp == 0 &&
 	 <li class="menu-item"><a href="works.html">研究会の活動</a></li>
 	 <li class="menu-item"><a href="intro.html">会員による研究の紹介</a></li>
 	 <li class="menu-item"><a href="contact.html">入会・お問い合わせ</a></li>
-	 <li class="menu-item"><a href="member.html">会員専用ページ</a></li>
+	 <li class="menu-item"><a href="member.php">会員専用ページ</a></li>
 	 <li class="menu-item"><a href="./en/" target="_blank">English Site</a></li>
 	 </ul>
  </nav>
@@ -569,7 +569,7 @@ if(($jumpPage == 0 && $sendmail == 1) || ($jumpPage == 0 && ($confirmDsp == 0 &&
           <li><a href="works.html">研究会の活動</a></li>
           <li><a href="intro.html">会員による研究の紹介</a></li>
           <li><a href="contact.html">入会・お問い合わせ</a></li>
-          <li><a href="member.html">会員専用ページ</a></li>
+          <li><a href="member.php">会員専用ページ</a></li>
         </ul>
       </nav>
       <p class="bottom-name">M-GTA研究会</p>
