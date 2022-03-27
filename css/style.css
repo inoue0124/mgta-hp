@@ -485,8 +485,8 @@ article {
 footer .pagetop {
   position: fixed;
   width: 80px;
-  bottom: 50px;
-  right: 40px;
+  bottom: 20px;
+  right: 20px;
 }
 
 @media screen and (max-width: 749px) {
@@ -899,3 +899,36 @@ p.submit input {
   width: 180px;
 }
 /*# sourceMappingURL=style.css.map */
+
+/* 書籍 */
+.card-container {
+  display: flex;
+  max-width: 750px;
+  height: 200px;
+}
+
+.card-img img {
+  width: 100%;
+  max-height: 100%;
+}
+
+.card-text {
+  width: 100%;
+  padding: 20px;
+}
+
+.card-title {
+  font-size: 16px;
+}
+
+.card-subtitle {
+  font-size: 14px;
+  color: #555;
+}
+
+@media screen and (max-width: 749px) {
+  .card-text {
+    width: 100%;
+    padding: 0 20px;
+  }
+}
