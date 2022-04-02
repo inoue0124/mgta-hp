@@ -4,7 +4,7 @@
     $_SESSION['isAuthorized'] = true;
   }
   if (isset($_POST['password'])) {
-    if ($_POST['password'] === 'password') {
+    if ($_POST['password'] === 'GroundedOnData') {
       $_SESSION['isAuthorized'] = true;
     } else {
       $_SESSION['isAuthorized'] = false;
