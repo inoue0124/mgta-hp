@@ -21,14 +21,14 @@ if (version_compare(PHP_VERSION, '5.1.0', '>=')) {//PHP5.1.0以上の場合の�
 }
 
 //サイトのトップページのURL　※デフォルトでは送信完了後に「トップページへ戻る」ボタンが表示されますので
-$site_top = "./contact.html";
+$site_top = "./member.php";
 
 // 管理者メールアドレス ※メールを受け取るメールアドレス(複数指定する場合は「,」で区切ってください 例 $to = "aa@aa.aa,bb@bb.bb";)
 // $to = "office@m-gta.jp,info@m-eights.com";
 $to = "inoue.inolabo@gmail.com";
 
 //フォームのメールアドレス入力箇所のname属性の値（name="○○"　の○○部分）
-$Email = "メールアドレス";
+$Email = "Email ";
 
 /*------------------------------------------------------------------------------------------------
 以下スパム防止のための設定　
@@ -56,7 +56,7 @@ $userMail = 1;
 $BccMail = "";
 
 // 管理者宛に送信されるメールのタイトル（件名）
-$subject = "M-GTA研究会　WEBサイトからのお問い合わせ";
+$subject = "M-GTA研究会　WEBサイトからの研究成果報告";
 
 // 送信確認画面の表示(する=1, しない=0)
 $confirmDsp = 1;
@@ -75,7 +75,9 @@ $requireCheck = 1;
 /* 必須入力項目(入力フォームで指定したname属性の値を指定してください。（上記で1を設定した場合のみ）
 値はシングルクォーテーションで囲み、複数の場合はカンマで区切ってください。フォーム側と順番を合わせると良いです。
 配列の形「name="○○[]"」の場合には必ず後ろの[]を取ったものを指定して下さい。*/
-$require = array('お名前','フリガナ','ご所属','メールアドレス','お問い合わせ内容');
+$require = $_POST['申込種別'] == 'author' 
+	? array('会員氏名　','著者名','著書名','出版社','刊行年','Email　')
+	: array('会員氏名','研究領域','学術論文名','学位授与大学','取得学位','学位取得年','Email');
 
 
 //----------------------------------------------------------------------
@@ -99,7 +101,7 @@ $dsp_name = 'お名前';
 //自動返信メールの冒頭の文言 ※日本語部分のみ変更可
 $remail_text = <<< TEXT
 
-お問い合わせありがとうございました。
+研究成果の報告ありがとうございました。
 メールをご確認後、担当者よりご返信致しますので今しばらくお待ちください。
 
 送信いただいた内容は以下になります。
@@ -142,7 +144,7 @@ $hankaku = 0;
 //全角英数字→半角変換を行う項目のname属性の値（name="○○"の「○○」部分）
 //※複数の場合にはカンマで区切って下さい。（上記で「1」を指定した場合のみ有効）
 //配列の形「name="○○[]"」の場合には必ず後ろの[]を取ったものを指定して下さい。
-$hankaku_array = array('電話番号');
+$hankaku_array = array();
 
 
 //------------------------------- 任意設定ここまで ---------------------------------------------
@@ -216,7 +218,7 @@ else if($confirmDsp == 1){
  <meta name="viewport" content="width=device-width">
  <meta name="description" content="M-GTA研究会（実践的グランデッド・セオリー研究会）">
  <meta name="keywords" content="M-GTA研究,実践的グランデッド・セオリー研究会">
- <title>入会・お問い合わせ|M-GTA研究会（実践的グランデッド・セオリー研究会）</title>
+ <title>会員専用ページ|M-GTA研究会（実践的グランデッド・セオリー研究会）</title>
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
  <script src="./js/jquery.bxslider.js"></script>
  <script src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.2.0/iscroll.min.js"></script>
@@ -234,7 +236,6 @@ else if($confirmDsp == 1){
  <main>
 <header>
  <div class="fixnav">
-
 		 <div class="h1wrap">
 			 <div class="inner-big">
 		 <p class="h1"><a href="./">M-GTA研究会<span>（実践的グランデッド・セオリー研究会）</span></a></p>
@@ -258,11 +259,12 @@ else if($confirmDsp == 1){
 				 </ul>
 				 </ul>
 				 <ul class="mainmav">
-					 <li><a href="mgta.html">M-GTAとは</a></li>
-					 <li><a href="works.html">研究会の活動</a></li>
-					 <li><a href="intro.html">会員による研究の紹介</a></li>
-					 <li class="current"><a href="contact.html">入会・お問い合わせ</a></li>
-					 <li><a href="member.php">会員専用ページ</a></li>
+				   <li><a href="about.html">研究会概要</a></li>
+				   <li><a href="mgta.html">M-GTAとは</a></li>
+				   <li><a href="works.html">研究会の活動</a></li>
+				   <li><a href="intro.html">会員による研究の紹介</a></li>
+				   <li><a href="contact.html">入会・お問い合わせ</a></li>
+				   <li><a href="member.php">会員専用ページ</a></li>
 				 </ul>
 			 </nav>
 		 </div>
@@ -276,27 +278,28 @@ else if($confirmDsp == 1){
  </button>
  <nav class="pc-none drawer-nav accordion-container" role="navigation" id= "accordion">
 	 <ul class="drawer-menu">
-		 <li class="menu-item"><a href="./">HOME</a></li>
-		 <li class="menu-item"><a href="mgta.html">M-GTAとは</a></li>
-	 <li class="menu-item"><a href="works.html">研究会の活動</a></li>
-	 <li class="menu-item"><a href="intro.html">会員による研究の紹介</a></li>
-	 <li class="menu-item"><a href="contact.html">入会・お問い合わせ</a></li>
-	 <li class="menu-item"><a href="member.php">会員専用ページ</a></li>
-	 <li class="menu-item"><a href="./en/" target="_blank">English Site</a></li>
+		<li class="menu-item"><a href="./">HOME</a></li>
+		<li class="menu-item"><a href="about.html">研究会概要</a></li>
+		<li class="menu-item"><a href="mgta.html">M-GTAとは</a></li>
+		<li class="menu-item"><a href="works.html">研究会の活動</a></li>
+		<li class="menu-item"><a href="intro.html">会員による研究の紹介</a></li>
+		<li class="menu-item"><a href="contact.html">入会・お問い合わせ</a></li>
+		<li class="menu-item"><a href="member.php">会員専用ページ</a></li>
+		<li class="menu-item"><a href="./en/" target="_blank">English Site</a></li>
 	 </ul>
  </nav>
 </div>
 </header>
 <article>
- <h1 class="page-h1">入会・お問い合わせ</h1>
+ <h1 class="page-h1">会員専用ページ</h1>
  <!--サイドメニューここから-->
  <div class="contens inner">
  <div class="side">
 	 <nav class="side-nav">
 		 <h2>CONTENTS MENU</h2>
 		 <ul>
-			 <li class="clearfix"><a href="#a">入会希望<i class="fas fa-chevron-right"></i></a></li>
-			 <li class="clearfix"><a href="#b">お問い合わせ<i class="fas fa-chevron-right"></i></a></li>
+		   <li class="clearfix"><a href="./member.php#a">ニューズレター<i class="fas fa-chevron-right"></i></a></li>
+           <li class="clearfix"><a href="./member.php#b">研究成果登録フォーム<i class="fas fa-chevron-right"></i></a></li>
 		 </ul>
 	 </nav>
 	 <div class="contact">
@@ -448,7 +451,7 @@ if(($jumpPage == 0 && $sendmail == 1) || ($jumpPage == 0 && ($confirmDsp == 0 &&
  <meta name="viewport" content="width=device-width">
  <meta name="description" content="M-GTA研究会（実践的グランデッド・セオリー研究会）">
  <meta name="keywords" content="M-GTA研究,実践的グランデッド・セオリー研究会">
- <title>入会・お問い合わせ|M-GTA研究会（実践的グランデッド・セオリー研究会）</title>
+ <title>会員専用ページ|M-GTA研究会（実践的グランデッド・セオリー研究会）</title>
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
  <script src="./js/jquery.bxslider.js"></script>
  <script src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.2.0/iscroll.min.js"></script>
@@ -490,11 +493,12 @@ if(($jumpPage == 0 && $sendmail == 1) || ($jumpPage == 0 && ($confirmDsp == 0 &&
 				 </ul>
 				 </ul>
 				 <ul class="mainmav">
-					 <li><a href="mgta.html">M-GTAとは</a></li>
-					 <li><a href="works.html">研究会の活動</a></li>
-					 <li><a href="intro.html">会員による研究の紹介</a></li>
-					 <li class="current"><a href="contact.html">入会・お問い合わせ</a></li>
-					 <li><a href="member.php">会員専用ページ</a></li>
+				   <li><a href="about.html">研究会概要</a></li>
+				   <li><a href="mgta.html">M-GTAとは</a></li>
+				   <li><a href="works.html">研究会の活動</a></li>
+				   <li><a href="intro.html">会員による研究の紹介</a></li>
+				   <li><a href="contact.html">入会・お問い合わせ</a></li>
+				   <li><a href="member.php">会員専用ページ</a></li>
 				 </ul>
 			 </nav>
 		 </div>
@@ -508,13 +512,14 @@ if(($jumpPage == 0 && $sendmail == 1) || ($jumpPage == 0 && ($confirmDsp == 0 &&
  </button>
  <nav class="pc-none drawer-nav accordion-container" role="navigation" id= "accordion">
 	 <ul class="drawer-menu">
-		 <li class="menu-item"><a href="./">HOME</a></li>
-		 <li class="menu-item"><a href="mgta.html">M-GTAとは</a></li>
-	 <li class="menu-item"><a href="works.html">研究会の活動</a></li>
-	 <li class="menu-item"><a href="intro.html">会員による研究の紹介</a></li>
-	 <li class="menu-item"><a href="contact.html">入会・お問い合わせ</a></li>
-	 <li class="menu-item"><a href="member.php">会員専用ページ</a></li>
-	 <li class="menu-item"><a href="./en/" target="_blank">English Site</a></li>
+	 	<li class="menu-item"><a href="./">HOME</a></li>
+        <li class="menu-item"><a href="about.html">研究会概要</a></li>
+        <li class="menu-item"><a href="mgta.html">M-GTAとは</a></li>
+        <li class="menu-item"><a href="works.html">研究会の活動</a></li>
+        <li class="menu-item"><a href="intro.html">会員による研究の紹介</a></li>
+        <li class="menu-item"><a href="contact.html">入会・お問い合わせ</a></li>
+        <li class="menu-item"><a href="member.php">会員専用ページ</a></li>
+        <li class="menu-item"><a href="./en/" target="_blank">English Site</a></li>
 	 </ul>
  </nav>
 </div>
@@ -527,8 +532,8 @@ if(($jumpPage == 0 && $sendmail == 1) || ($jumpPage == 0 && ($confirmDsp == 0 &&
 	 <nav class="side-nav">
 		 <h2>CONTENTS MENU</h2>
 		 <ul>
-			 <li class="clearfix"><a href="#a">入会希望<i class="fas fa-chevron-right"></i></a></li>
-			 <li class="clearfix"><a href="#b">お問い合わせ<i class="fas fa-chevron-right"></i></a></li>
+		 	<li class="clearfix"><a href="./member.php#a">ニューズレター<i class="fas fa-chevron-right"></i></a></li>
+            <li class="clearfix"><a href="./member.php#b">研究成果登録フォーム<i class="fas fa-chevron-right"></i></a></li>
 		 </ul>
 	 </nav>
 	 <div class="contact">
@@ -540,18 +545,22 @@ if(($jumpPage == 0 && $sendmail == 1) || ($jumpPage == 0 && ($confirmDsp == 0 &&
  <!--サイドメニューここまで-->
  <!--メインコンテンツここから-->
  <div class="main">
-	 <?php if($empty_flag == 1){ ?>
-		<p>入力にエラーがあります。下記をご確認の上「戻る」ボタンにて修正をお願い致します。</p>
-		<div style="color:red"><?php echo $errm; ?></div>
-		<br /><br /><input type="button" value=" 前画面に戻る " onClick="history.back()">
 
-		<?php }else{ ?>
-		<div class="container" style="margin: 16px 0;">
-		<p>送信ありがとうございました。</p>
-		<p>送信は正常に完了しました。</p>
-		</div>
-		<a href="<?php echo $site_top ;?>">トップページへ戻る&raquo;</a>
+<?php if($empty_flag == 1){ ?>
+<p>入力にエラーがあります。下記をご確認の上「戻る」ボタンにて修正をお願い致します。</p>
+<div style="color:red"><?php echo $errm; ?></div>
+<br /><br /><input type="button" value=" 前画面に戻る " onClick="history.back()">
+
+<?php }else{ ?>
+<div class="container" style="margin: 16px 0;">
+<p>送信ありがとうございました。</p>
+<p>送信は正常に完了しました。</p>
+</div>
+<a href="<?php echo $site_top ;?>">トップページへ戻る&raquo;</a>
+
+
        </div>
+
 </div>
     </section>
 

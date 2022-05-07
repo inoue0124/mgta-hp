@@ -1,242 +1,608 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ja">
+
 <head>
-  <meta name="robots" content="noindex">
   <meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width">
+  <meta name="viewport" content="width=device-width">
   <meta name="description" content="M-GTA研究会（実践的グランデッド・セオリー研究会）">
   <meta name="keywords" content="M-GTA研究,実践的グランデッド・セオリー研究会">
-	<title>M-GTAとは|M-GTA研究会（実践的グランデッド・セオリー研究会）</title>
+  <title>M-GTAとは|M-GTA研究会（実践的グランデッド・セオリー研究会）</title>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-  <script src="/js/jquery.bxslider.js"></script>
+  <script src="./js/jquery.bxslider.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.2.0/iscroll.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/js/drawer.min.js"></script>
-	<link href="/css/base.css" rel="stylesheet" type="text/css" media="all">
-  <link rel="stylesheet" type="text/css" href="/css/colorbox.css">
-	<link rel="shortcut icon" href="img/favicon.ico">
-  <script src="/js/jquery.colorbox.js"></script>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/css/drawer.min.css" rel="stylesheet" type="text/css" media="all">
-  <link href="/css/style.min.css" rel="stylesheet" type="text/css" media="all">
+  <link href="./css/base.css" rel="stylesheet" type="text/css" media="all">
+  <link rel="stylesheet" type="text/css" href="./css/colorbox.css">
+  <link rel="shortcut icon" href="img/favicon.ico">
+  <script src="./js/jquery.colorbox.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/css/drawer.min.css" rel="stylesheet" type="text/css"
+    media="all">
+  <link href="./css/style.css" rel="stylesheet" type="text/css" media="all">
   <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
 </head>
 
 <body class="page drawer drawer--right">
   <main>
-<header>
-  <div class="fixnav">
+    <header>
+      <div class="fixnav">
+        <div class="h1wrap">
+          <div class="inner-big">
+            <p class="h1"><a href="./">M-GTA研究会<span>（実践的グランデッド・セオリー研究会）</span></a></p>
+            <div class="search">
+              <form method="get" action="https://www.google.co.jp/search" target="_blank">
+                <input type="text" name="q" size="31" maxlength="255" value="">
+                <input type="submit" name="btng" value="検索">
+                <input type="hidden" name="hl" value="ja">
+                <input type="hidden" name="sitesearch" value="https://m-gta.jp/">
+              </form>
+            </div>
+          </div>
+        </div>
 
-      <div class="h1wrap">
-        <div class="inner-big">
-      <p class="h1"><a href="/">M-GTA研究会<span>（実践的グランデッド・セオリー研究会）</span></a></p>
-      <div class="search">
-        <form method="get" action="https://www.google.co.jp/search" target="_blank">
-          <input type="text" name="q" size="31" maxlength="255" value="">
-          <input type="submit" name="btng" value="検索">
-          <input type="hidden" name="hl" value="ja">
-          <input type="hidden" name="sitesearch" value="https://m-gta.jp/">
-        </form>
+        <div class="mainnav_wrap">
+          <div class="inner-big">
+            <nav>
+              <ul class="top_nav">
+                <li><a href="./">Home<i class="fas fa-chevron-right"></i></a></li>
+                <li><a href="./en/" target="_blank">English<i class="fas fa-chevron-right"></i></a></li>
+              </ul>
+              </ul>
+              <ul class="mainmav">
+                <li><a href="about.html">研究会概要</a></li>
+                <li><a href="mgta.html">M-GTAとは</a></li>
+                <li><a href="works.html">研究会の活動</a></li>
+                <li><a href="intro.html">会員による研究の紹介</a></li>
+                <li><a href="contact.html">入会・お問い合わせ</a></li>
+                <li><a href="member.php">会員専用ページ</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
       </div>
-       </div>
-    </div>
 
-      <div class="mainnav_wrap">
-        <div class="inner-big">
-        <nav>
-          <ul class="top_nav">
-            <li><a href="/">Home<i class="fas fa-chevron-right"></i></a></li>
-            <li><a href="/en/" target="_blank">English<i class="fas fa-chevron-right"></i></a></li>
-          </ul>
-          </ul>
-          <ul class="mainmav">
-            <li><a href="about.html">M-GTAとは</a></li>
-            <li><a href="works.html">研究会の活動</a></li>
-            <li class="current"><a href="intro.html">会員による研究の紹介</a></li>
-            <li><a href="contact.html">入会・お問い合わせ</a></li>
-            <li><a href="member.html">会員専用ページ</a></li>
-          </ul>
-        </nav>
+      <!--ドロワー-->
+      <button type="button" class="pc-none drawer-toggle drawer-hamburger">
+        <!--<span class="sr-only"><img src="./img/common/menu.png"></span>-->
+        <span class="drawer-hamburger-icon"></span>
+      </button>
+      <nav class="pc-none drawer-nav accordion-container" role="navigation" id="accordion">
+        <ul class="drawer-menu">
+          <li class="menu-item"><a href="./">HOME</a></li>
+          <li class="menu-item"><a href="about.html">研究会概要</a></li>
+          <li class="menu-item"><a href="mgta.html">M-GTAとは</a></li>
+          <li class="menu-item"><a href="works.html">研究会の活動</a></li>
+          <li class="menu-item"><a href="intro.html">会員による研究の紹介</a></li>
+          <li class="menu-item"><a href="contact.html">入会・お問い合わせ</a></li>
+          <li class="menu-item"><a href="member.php">会員専用ページ</a></li>
+          <li class="menu-item"><a href="./en/" target="_blank">English Site</a></li>
+        </ul>
+      </nav>
       </div>
-    </div>
-  </div>
+    </header>
+    <article>
+      <h1 class="page-h1">会員による研究の紹介</h1>
+      <!--サイドメニューここから-->
+      <div class="contens inner">
+        <div class="side">
+          <nav class="side-nav">
+            <h2>CONTENTS MENU</h2>
+            <ul>
+              <li class="clearfix"><a href="#a">博士論文<i class="fas fa-chevron-right"></i></a></li>
+              <li class="clearfix"><a href="#b">書籍<i class="fas fa-chevron-right"></i></a></li>
+            </ul>
+          </nav>
+          <div class="contact">
+            <h3>ご入会•お問い合わせ</h3>
+            <p>ご入会や研究会へのお問い合わせは<br class="sp-none">こちらへどうぞ</p>
+            <p class="mt50 link-b3"><a class="clearfix" href="contact.html">メールでのお問い合わせ<i
+                  class="fas fa-chevron-right"></i></a></p>
+          </div>
+        </div>
+        <!--サイドメニューここまで-->
+        <!--メインコンテンツここから-->
+        <div class="main">
+          <!--パンくずリスト-->
+          <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+              <a itemprop="item" href="./">
+                <span itemprop="name">home</span>
+              </a>
+              <meta itemprop="position" content="1" />
+            </li>
 
-  <!--ドロワー-->
-  <button type="button" class="pc-none drawer-toggle drawer-hamburger">
-    <!--<span class="sr-only"><img src="/img/common/menu.png"></span>-->
-    <span class="drawer-hamburger-icon"></span>
-  </button>
-  <nav class="pc-none drawer-nav accordion-container" role="navigation" id= "accordion">
-    <ul class="drawer-menu">
-      <li class="menu-item"><a href="/">HOME</a></li>
-      <li class="menu-item"><a href="about.html">M-GTAとは</a></li>
-    <li class="menu-item"><a href="works.html">研究会の活動</a></li>
-    <li class="menu-item"><a href="intro.html">会員による研究の紹介</a></li>
-    <li class="menu-item"><a href="contact.html">入会・お問い合わせ</a></li>
-    <li class="menu-item"><a href="member.html">会員専用ページ</a></li>
-    <li class="menu-item"><a href="/en/" target="_blank">English Site</a></li>
-    </ul>
-  </nav>
-</div>
-</header>
-<article>
-  <h1 class="page-h1">会員による研究の紹介</h1>
-  <!--サイドメニューここから-->
-  <div class="contens inner">
-  <div class="side">
-    <nav class="side-nav">
-      <h2>CONTENTS MENU</h2>
-      <ul>
-        <li class="clearfix"><a href="intro.html">博士論文<i class="fas fa-chevron-right"></i></a></li>
-        <li class="clearfix"><a href="intro.html">書籍<i class="fas fa-chevron-right"></i></a></li>
-      </ul>
-    </nav>
-    <div class="contact">
-      <h3>ご入会•お問い合わせ</h3>
-      <p>ご入会や研究会へのお問い合わせは<br class="sp-none">こちらへどうぞ</p>
-      <p class="mt50 link-b3"><a class="clearfix" href="contact.html">メールでのお問い合わせ<i class="fas fa-chevron-right"></i></a></p>
-    </div>
-  </div>
-  <!--サイドメニューここまで-->
-  <!--メインコンテンツここから-->
-  <div class="main">
-    <!--パンくずリスト-->
-    <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
-      <li itemprop="itemListElement" itemscope
-      itemtype="https://schema.org/ListItem">
-      <a itemprop="item" href="/">
-        <span itemprop="name">home</span>
-      </a>
-      <meta itemprop="position" content="1" />
-      </li>
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+              <a itemprop="item" href="intro.html">
+                <span itemprop="name">会員による研究の紹介</span>
+              </a>
+              <meta itemprop="position" content="2" />
+            </li>
+          </ol>
+          <!--パンくずリスト-->
 
-      <li itemprop="itemListElement" itemscope
-        itemtype="https://schema.org/ListItem">
-        <a itemprop="item" href="about.html">
-          <span itemprop="name">会員による研究の紹介</span>
-        </a>
-        <meta itemprop="position" content="2" />
-      </li>
-    </ol>
-    <!--パンくずリスト-->
+          <section id="a">
+            <h2 class="page-h2">博士論文</h2>
+            <h3 class="page-h3">論文と公開先の紹介</h3>
+            <div class="contener">
+              <p class="page-p">現在調整中です</p>
+            </div>
+          </section>
 
-    <section id="b">
-     <h2 class="page-h2">博士論文</h2>
-     <h3 class="page-h3">論文と公開先の紹介</h3>
-     <div class="contener">
-      <p class="page-p">現在調整中です</p>
+          <section id="b">
+            <h2 class="page-h2">書籍</h2>
+            <h3 class="page-h3">会員の書籍</h3>
+            <div class="contener">
+              <div class='card-container'>
+                <div class='card-img'>
+                  <a
+                    href='https://www.amazon.co.jp/%E5%AE%B6%E6%97%8F%E4%B8%BB%E4%BD%93%E3%82%BD%E3%83%BC%E3%82%B7%E3%83%A3%E3%83%AB%E3%83%AF%E3%83%BC%E3%82%AF%E8%AB%96-%E5%AE%B6%E6%97%8F%E3%83%AC%E3%82%B8%E3%83%AA%E3%82%A8%E3%83%B3%E3%82%B9%E6%A6%82%E5%BF%B5%E3%82%92%E6%89%8B%E3%81%8C%E3%81%8B%E3%82%8A%E3%81%AB-%E5%BE%97%E6%B4%A5-%E6%84%BC%E5%AD%90/dp/4779512549'>
+                    <img width='768' height='512' src='./img/books/1.jpg' />
+                  </a>
+                </div>
+                <div class='card-text'>
+                  <a
+                    href='https://www.amazon.co.jp/%E5%AE%B6%E6%97%8F%E4%B8%BB%E4%BD%93%E3%82%BD%E3%83%BC%E3%82%B7%E3%83%A3%E3%83%AB%E3%83%AF%E3%83%BC%E3%82%AF%E8%AB%96-%E5%AE%B6%E6%97%8F%E3%83%AC%E3%82%B8%E3%83%AA%E3%82%A8%E3%83%B3%E3%82%B9%E6%A6%82%E5%BF%B5%E3%82%92%E6%89%8B%E3%81%8C%E3%81%8B%E3%82%8A%E3%81%AB-%E5%BE%97%E6%B4%A5-%E6%84%BC%E5%AD%90/dp/4779512549'>
+                    <p class='card-title'>家族主体ソーシャルワーク論ー家族レリジエンス概念を手がかりに</p>
+                    <p class='card-subtitle'>得津愼子</p>
+                    <p class='card-subtitle'>ナカニシヤ出版</p>
+                    <p class='card-subtitle'>2018
+                    </p>
+                  </a>
+                </div>
+              </div>
+              <div class='card-container'>
+                <div class='card-img'>
+                  <a
+                    href='https://www.amazon.co.jp/%E3%81%86%E3%81%A4%E7%97%85%E4%BC%91%E8%81%B7%E8%80%85%E3%81%AE%E9%9B%86%E5%9B%A3%E8%AA%8D%E7%9F%A5%E8%A1%8C%E5%8B%95%E7%99%82%E6%B3%95%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E6%B7%B7%E5%90%88%E5%9E%8B%E7%A0%94%E7%A9%B6-%E4%B8%AD%E6%9D%91-%E8%81%A1%E7%BE%8E/dp/4759922083'>
+                    <img width='768' height='512' src='./img/books/2.jpg' />
+                  </a>
+                </div>
+                <div class='card-text'>
+                  <a
+                    href='https://www.amazon.co.jp/%E3%81%86%E3%81%A4%E7%97%85%E4%BC%91%E8%81%B7%E8%80%85%E3%81%AE%E9%9B%86%E5%9B%A3%E8%AA%8D%E7%9F%A5%E8%A1%8C%E5%8B%95%E7%99%82%E6%B3%95%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E6%B7%B7%E5%90%88%E5%9E%8B%E7%A0%94%E7%A9%B6-%E4%B8%AD%E6%9D%91-%E8%81%A1%E7%BE%8E/dp/4759922083'>
+                    <p class='card-title'>うつ病休職者の集団認知行動療法に関する混合型研究</p>
+                    <p class='card-subtitle'>中村聡美</p>
+                    <p class='card-subtitle'>風間書房</p>
+                    <p class='card-subtitle'>2018
+                    </p>
+                  </a>
+                </div>
+              </div>
+              <div class='card-container'>
+                <div class='card-img'>
+                  <a
+                    href='https://www.amazon.co.jp/%E8%A8%98%E6%86%B6%E3%81%A8%E6%84%9F%E6%83%85%E3%81%AE%E3%82%A8%E3%82%B9%E3%83%8E%E3%82%B0%E3%83%A9%E3%83%95%E3%82%A3%E3%83%BC-%E8%AA%8D%E7%9F%A5%E7%97%87%E3%81%A8%E3%82%B3%E3%83%AB%E3%82%B5%E3%82%B3%E3%83%95%E7%97%87%E5%80%99%E7%BE%A4%E3%81%AE%E3%83%95%E3%82%A3%E3%83%BC%E3%83%AB%E3%83%89%E3%83%AF%E3%83%BC%E3%82%AF%E3%81%8B%E3%82%89-%E4%BD%90%E5%B7%9D-%E4%BD%B3%E5%8D%97%E6%9E%9D/dp/486339084X'>
+                    <img width='768' height='512' src='./img/books/3.jpg' />
+                  </a>
+                </div>
+                <div class='card-text'>
+                  <a
+                    href='https://www.amazon.co.jp/%E8%A8%98%E6%86%B6%E3%81%A8%E6%84%9F%E6%83%85%E3%81%AE%E3%82%A8%E3%82%B9%E3%83%8E%E3%82%B0%E3%83%A9%E3%83%95%E3%82%A3%E3%83%BC-%E8%AA%8D%E7%9F%A5%E7%97%87%E3%81%A8%E3%82%B3%E3%83%AB%E3%82%B5%E3%82%B3%E3%83%95%E7%97%87%E5%80%99%E7%BE%A4%E3%81%AE%E3%83%95%E3%82%A3%E3%83%BC%E3%83%AB%E3%83%89%E3%83%AF%E3%83%BC%E3%82%AF%E3%81%8B%E3%82%89-%E4%BD%90%E5%B7%9D-%E4%BD%B3%E5%8D%97%E6%9E%9D/dp/486339084X'>
+                    <p class='card-title'>記憶と感情のエスノグラフィー</p>
+                    <p class='card-subtitle'>佐川佳南枝</p>
+                    <p class='card-subtitle'>ハーベスト社</p>
+                    <p class='card-subtitle'>2017
+                    </p>
+                  </a>
+                </div>
+              </div>
+              <div class='card-container'>
+                <div class='card-img'>
+                  <a
+                    href='https://www.amazon.co.jp/%E6%95%99%E5%93%A1%E3%81%AE%E7%95%B0%E6%96%87%E5%8C%96%E4%BD%93%E9%A8%93-%E7%95%B0%E6%96%87%E5%8C%96%E9%81%A9%E5%BF%9C%E3%83%BB%E4%BA%BA%E9%96%93%E7%9A%84%E6%88%90%E9%95%B7%E3%83%BB%E6%95%99%E5%93%A1%E3%81%A8%E3%81%97%E3%81%A6%E3%81%AE%E6%88%90%E9%95%B7-%E9%88%B4%E6%9C%A8-%E4%BA%AC%E5%AD%90/dp/4759921141'>
+                    <img width='768' height='512' src='./img/books/4.jpg' />
+                  </a>
+                </div>
+                <div class='card-text'>
+                  <a
+                    href='https://www.amazon.co.jp/%E6%95%99%E5%93%A1%E3%81%AE%E7%95%B0%E6%96%87%E5%8C%96%E4%BD%93%E9%A8%93-%E7%95%B0%E6%96%87%E5%8C%96%E9%81%A9%E5%BF%9C%E3%83%BB%E4%BA%BA%E9%96%93%E7%9A%84%E6%88%90%E9%95%B7%E3%83%BB%E6%95%99%E5%93%A1%E3%81%A8%E3%81%97%E3%81%A6%E3%81%AE%E6%88%90%E9%95%B7-%E9%88%B4%E6%9C%A8-%E4%BA%AC%E5%AD%90/dp/4759921141'>
+                    <p class='card-title'>教員の異文化体験―異文化適応・人間的成長・教員としての成長―</p>
+                    <p class='card-subtitle'>鈴木京子</p>
+                    <p class='card-subtitle'>風間書房</p>
+                    <p class='card-subtitle'>2015
+                    </p>
+                  </a>
+                </div>
+              </div>
+              <div class='card-container'>
+                <div class='card-img'>
+                  <a
+                    href='https://www.amazon.co.jp/%E3%82%BD%E3%83%BC%E3%82%B7%E3%83%A3%E3%83%AB%E3%83%AF%E3%83%BC%E3%82%AB%E3%83%BC%E3%81%AE%E3%80%8C%E5%BD%B9%E5%89%B2%E5%BD%A2%E6%88%90%E3%80%8D%E3%83%97%E3%83%AD%E3%82%BB%E3%82%B9-%E3%80%8C%E9%81%95%E5%92%8C%E6%84%9F%E3%81%AE%E3%81%82%E3%82%8B%E4%BB%95%E4%BA%8B%E3%80%8D%E3%81%8B%E3%82%89%E7%B5%84%E7%B9%94%E6%B4%BB%E5%8B%95%E3%81%B8%E3%81%AE%E5%AE%9F%E8%B7%B5%E3%83%A2%E3%83%87%E3%83%AB-%E5%B2%A9%E6%9C%AC-%E6%93%8D/dp/4805851562'>
+                    <img width='768' height='512' src='./img/books/5.jpg' />
+                  </a>
+                </div>
+                <div class='card-text'>
+                  <a
+                    href='https://www.amazon.co.jp/%E3%82%BD%E3%83%BC%E3%82%B7%E3%83%A3%E3%83%AB%E3%83%AF%E3%83%BC%E3%82%AB%E3%83%BC%E3%81%AE%E3%80%8C%E5%BD%B9%E5%89%B2%E5%BD%A2%E6%88%90%E3%80%8D%E3%83%97%E3%83%AD%E3%82%BB%E3%82%B9-%E3%80%8C%E9%81%95%E5%92%8C%E6%84%9F%E3%81%AE%E3%81%82%E3%82%8B%E4%BB%95%E4%BA%8B%E3%80%8D%E3%81%8B%E3%82%89%E7%B5%84%E7%B9%94%E6%B4%BB%E5%8B%95%E3%81%B8%E3%81%AE%E5%AE%9F%E8%B7%B5%E3%83%A2%E3%83%87%E3%83%AB-%E5%B2%A9%E6%9C%AC-%E6%93%8D/dp/4805851562'>
+                    <p class='card-title'>ソーシャルワーカーの「役割形成」プロセス－「違和感のある仕事」から組織活動への実践モデル－</p>
+                    <p class='card-subtitle'>岩本操</p>
+                    <p class='card-subtitle'>中央法規</p>
+                    <p class='card-subtitle'>2015
+                    </p>
+                  </a>
+                </div>
+              </div>
+              <div class='card-container'>
+                <div class='card-img'>
+                  <a
+                    href='https://www.amazon.co.jp/%E3%82%BD%E3%83%BC%E3%82%B7%E3%83%A3%E3%83%AB%E3%83%AF%E3%83%BC%E3%82%AF%E6%94%AF%E6%8F%B4%E3%81%AE%E7%99%BA%E5%B1%95%E7%9A%84%E4%BA%8C%E9%87%8D%E8%9E%BA%E6%97%8B%E6%A7%8B%E9%80%A0%E2%80%95%E5%BD%B9%E5%89%B2%E5%96%AA%E5%A4%B1%E3%81%AB%E3%81%A8%E3%82%82%E3%81%AA%E3%81%86%E6%82%B2%E5%98%86%E4%BD%9C%E6%A5%AD%E9%81%8E%E7%A8%8B%E3%81%AE%E5%88%86%E6%9E%90-%E5%A4%A7%E8%B3%80-%E6%9C%89%E8%A8%98/dp/4750103888'>
+                    <img width='768' height='512' src='./img/books/6.jpg' />
+                  </a>
+                </div>
+                <div class='card-text'>
+                  <a
+                    href='https://www.amazon.co.jp/%E3%82%BD%E3%83%BC%E3%82%B7%E3%83%A3%E3%83%AB%E3%83%AF%E3%83%BC%E3%82%AF%E6%94%AF%E6%8F%B4%E3%81%AE%E7%99%BA%E5%B1%95%E7%9A%84%E4%BA%8C%E9%87%8D%E8%9E%BA%E6%97%8B%E6%A7%8B%E9%80%A0%E2%80%95%E5%BD%B9%E5%89%B2%E5%96%AA%E5%A4%B1%E3%81%AB%E3%81%A8%E3%82%82%E3%81%AA%E3%81%86%E6%82%B2%E5%98%86%E4%BD%9C%E6%A5%AD%E9%81%8E%E7%A8%8B%E3%81%AE%E5%88%86%E6%9E%90-%E5%A4%A7%E8%B3%80-%E6%9C%89%E8%A8%98/dp/4750103888'>
+                    <p class='card-title'>ソーシャルワーク支援の発展的二重螺旋構造―役割喪失にともなう悲嘆作業過程の分析―</p>
+                    <p class='card-subtitle'>大賀有記</p>
+                    <p class='card-subtitle'>相川書房</p>
+                    <p class='card-subtitle'>2014
+                    </p>
+                  </a>
+                </div>
+              </div>
+              <div class='card-container'>
+                <div class='card-img'>
+                  <a
+                    href='https://www.amazon.co.jp/%E8%81%B4%E8%A6%9A%E9%9A%9C%E5%AE%B3%E3%81%A8%E7%B2%BE%E7%A5%9E%E9%9A%9C%E5%AE%B3%E3%82%92%E3%81%82%E3%82%8F%E3%81%9B%E3%82%82%E3%81%A4%E4%BA%BA%E3%81%AE%E6%94%AF%E6%8F%B4%E3%81%A8%E3%82%B3%E3%83%9F%E3%83%A5%E3%83%8B%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3-%E5%9B%B0%E9%9B%A3%E6%80%A7%E3%81%8B%E3%82%89%E7%90%86%E8%A7%A3%E3%81%B8%E5%B8%B0%E7%B5%90%E3%81%99%E3%82%8B%E6%A6%82%E5%BF%B5%E3%83%A2%E3%83%87%E3%83%AB%E3%81%AE%E6%A7%8B%E7%AF%89-MINERVA%E7%A4%BE%E4%BC%9A%E7%A6%8F%E7%A5%89%E5%8F%A2%E6%9B%B8-%E8%B5%A4%E7%95%91-%E6%B7%B3/dp/4623067114'>
+                    <img width='768' height='512' src='./img/books/7.jpg' />
+                  </a>
+                </div>
+                <div class='card-text'>
+                  <a
+                    href='https://www.amazon.co.jp/%E8%81%B4%E8%A6%9A%E9%9A%9C%E5%AE%B3%E3%81%A8%E7%B2%BE%E7%A5%9E%E9%9A%9C%E5%AE%B3%E3%82%92%E3%81%82%E3%82%8F%E3%81%9B%E3%82%82%E3%81%A4%E4%BA%BA%E3%81%AE%E6%94%AF%E6%8F%B4%E3%81%A8%E3%82%B3%E3%83%9F%E3%83%A5%E3%83%8B%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3-%E5%9B%B0%E9%9B%A3%E6%80%A7%E3%81%8B%E3%82%89%E7%90%86%E8%A7%A3%E3%81%B8%E5%B8%B0%E7%B5%90%E3%81%99%E3%82%8B%E6%A6%82%E5%BF%B5%E3%83%A2%E3%83%87%E3%83%AB%E3%81%AE%E6%A7%8B%E7%AF%89-MINERVA%E7%A4%BE%E4%BC%9A%E7%A6%8F%E7%A5%89%E5%8F%A2%E6%9B%B8-%E8%B5%A4%E7%95%91-%E6%B7%B3/dp/4623067114'>
+                    <p class='card-title'>聴覚障害と精神障害をあわせもつ人の支援とコミュニケーション－困難性から理解へ帰結する概念モデルの構築―</p>
+                    <p class='card-subtitle'>赤畑淳</p>
+                    <p class='card-subtitle'>ミネルヴァ書房</p>
+                    <p class='card-subtitle'>2014
+                    </p>
+                  </a>
+                </div>
+              </div>
+              <div class='card-container'>
+                <div class='card-img'>
+                  <a
+                    href='https://www.amazon.co.jp/%E5%8C%BB%E7%99%82%E3%82%BD%E3%83%BC%E3%82%B7%E3%83%A3%E3%83%AB%E3%83%AF%E3%83%BC%E3%82%AB%E3%83%BC%E3%81%AE%E6%88%90%E9%95%B7%E3%81%B8%E3%81%AE%E9%81%93%E3%81%AE%E3%82%8A%E2%80%95%E5%AE%9F%E8%B7%B5%E8%83%BD%E5%8A%9B%E5%A4%89%E5%AE%B9%E9%81%8E%E7%A8%8B%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E8%B3%AA%E7%9A%84%E7%A0%94%E7%A9%B6-%E4%BF%9D%E6%AD%A3-%E5%8F%8B%E5%AD%90/dp/4750103810'>
+                    <img width='768' height='512' src='./img/books/8.jpg' />
+                  </a>
+                </div>
+                <div class='card-text'>
+                  <a
+                    href='https://www.amazon.co.jp/%E5%8C%BB%E7%99%82%E3%82%BD%E3%83%BC%E3%82%B7%E3%83%A3%E3%83%AB%E3%83%AF%E3%83%BC%E3%82%AB%E3%83%BC%E3%81%AE%E6%88%90%E9%95%B7%E3%81%B8%E3%81%AE%E9%81%93%E3%81%AE%E3%82%8A%E2%80%95%E5%AE%9F%E8%B7%B5%E8%83%BD%E5%8A%9B%E5%A4%89%E5%AE%B9%E9%81%8E%E7%A8%8B%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E8%B3%AA%E7%9A%84%E7%A0%94%E7%A9%B6-%E4%BF%9D%E6%AD%A3-%E5%8F%8B%E5%AD%90/dp/4750103810'>
+                    <p class='card-title'>医療ソーシャルワーカーの成長への道のり～実践能力変容過程に関する質的研究</p>
+                    <p class='card-subtitle'>保正友子</p>
+                    <p class='card-subtitle'>相川書房</p>
+                    <p class='card-subtitle'>2013
+                    </p>
+                  </a>
+                </div>
+              </div>
+              <div class='card-container'>
+                <div class='card-img'>
+                  <a
+                    href='https://www.amazon.co.jp/%E8%AA%8D%E7%9F%A5%E7%97%87%E9%AB%98%E9%BD%A2%E8%80%85%E3%82%BD%E3%83%BC%E3%82%B7%E3%83%A3%E3%83%AB%E3%83%AF%E3%83%BC%E3%82%AF%E2%80%95%E3%82%BD%E3%83%BC%E3%82%B7%E3%83%A3%E3%83%AB%E3%83%AF%E3%83%BC%E3%82%AB%E3%83%BC%E3%81%AE%E5%9B%B0%E9%9B%A3%E6%80%A7%E3%81%A8%E5%AF%BE%E5%87%A6%E8%A1%8C%E7%82%BA-%E4%B9%85%E6%9D%BE-%E4%BF%A1%E5%A4%AB/dp/4750103802'>
+                    <img width='768' height='512' src='./img/books/9.jpg' />
+                  </a>
+                </div>
+                <div class='card-text'>
+                  <a
+                    href='https://www.amazon.co.jp/%E8%AA%8D%E7%9F%A5%E7%97%87%E9%AB%98%E9%BD%A2%E8%80%85%E3%82%BD%E3%83%BC%E3%82%B7%E3%83%A3%E3%83%AB%E3%83%AF%E3%83%BC%E3%82%AF%E2%80%95%E3%82%BD%E3%83%BC%E3%82%B7%E3%83%A3%E3%83%AB%E3%83%AF%E3%83%BC%E3%82%AB%E3%83%BC%E3%81%AE%E5%9B%B0%E9%9B%A3%E6%80%A7%E3%81%A8%E5%AF%BE%E5%87%A6%E8%A1%8C%E7%82%BA-%E4%B9%85%E6%9D%BE-%E4%BF%A1%E5%A4%AB/dp/4750103802'>
+                    <p class='card-title'>認知症高齢者ソーシャルワーク－ソーシャルワーカーの困難性と対処行為</p>
+                    <p class='card-subtitle'>久松信夫</p>
+                    <p class='card-subtitle'>相川書房</p>
+                    <p class='card-subtitle'>2013
+                    </p>
+                  </a>
+                </div>
+              </div>
+              <div class='card-container'>
+                <div class='card-img'>
+                  <a
+                    href='https://www.amazon.co.jp/%E9%9F%93%E5%9B%BD%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8B%E6%97%A5%E6%9C%AC%E8%AA%9E%E6%95%99%E8%82%B2%E5%BF%85%E8%A6%81%E8%AB%96%E3%81%AE%E5%8F%B2%E7%9A%84%E5%B1%95%E9%96%8B-%E6%B2%B3%E5%85%88-%E4%BF%8A%E5%AD%90/dp/4894766329'>
+                    <img width='768' height='512' src='./img/books/10.jpg' />
+                  </a>
+                </div>
+                <div class='card-text'>
+                  <a
+                    href='https://www.amazon.co.jp/%E9%9F%93%E5%9B%BD%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8B%E6%97%A5%E6%9C%AC%E8%AA%9E%E6%95%99%E8%82%B2%E5%BF%85%E8%A6%81%E8%AB%96%E3%81%AE%E5%8F%B2%E7%9A%84%E5%B1%95%E9%96%8B-%E6%B2%B3%E5%85%88-%E4%BF%8A%E5%AD%90/dp/4894766329'>
+                    <p class='card-title'>韓国における日本語教育必要論の史的展開</p>
+                    <p class='card-subtitle'>川先俊子</p>
+                    <p class='card-subtitle'>ひつじ書房</p>
+                    <p class='card-subtitle'>2013
+                    </p>
+                  </a>
+                </div>
+              </div>
+              <div class='card-container'>
+                <div class='card-img'>
+                  <a
+                    href='https://www.amazon.co.jp/%E8%A2%AB%E7%88%86%E8%80%85%E3%82%92%E6%8F%B4%E5%8A%A9%E3%81%97%E3%81%A4%E3%81%A5%E3%81%91%E3%82%8B%E5%8C%BB%E7%99%82%E3%82%BD%E3%83%BC%E3%82%B7%E3%83%A3%E3%83%AB%E3%83%AF%E3%83%BC%E3%82%AB%E3%83%BC%E3%81%9F%E3%81%A1-%E9%BB%92%E5%B2%A9-%E6%99%B4%E5%AD%90/dp/4780706505'>
+                    <img width='768' height='512' src='./img/books/11.jpg' />
+                  </a>
+                </div>
+                <div class='card-text'>
+                  <a
+                    href='https://www.amazon.co.jp/%E8%A2%AB%E7%88%86%E8%80%85%E3%82%92%E6%8F%B4%E5%8A%A9%E3%81%97%E3%81%A4%E3%81%A5%E3%81%91%E3%82%8B%E5%8C%BB%E7%99%82%E3%82%BD%E3%83%BC%E3%82%B7%E3%83%A3%E3%83%AB%E3%83%AF%E3%83%BC%E3%82%AB%E3%83%BC%E3%81%9F%E3%81%A1-%E9%BB%92%E5%B2%A9-%E6%99%B4%E5%AD%90/dp/4780706505'>
+                    <p class='card-title'>被爆者を援助しつづける医療ソーシャルワーカーたち</p>
+                    <p class='card-subtitle'>黒岩晴子</p>
+                    <p class='card-subtitle'>本の泉社</p>
+                    <p class='card-subtitle'>2012
+                    </p>
+                  </a>
+                </div>
+              </div>
+              <div class='card-container'>
+                <div class='card-img'>
+                  <a
+                    href='https://www.amazon.co.jp/%E6%97%A5%E8%8B%B1%E3%81%AE%E3%83%95%E3%82%A3%E3%83%BC%E3%83%AB%E3%83%89%E8%AA%BF%E6%9F%BB%E3%81%8B%E3%82%89%E8%80%83%E3%81%88%E3%82%8B%E5%AD%A6%E6%A0%A1%E5%9B%B3%E6%9B%B8%E9%A4%A8%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8B%E7%89%B9%E5%88%A5%E6%94%AF%E6%8F%B4%E6%95%99%E8%82%B2%E3%81%AE%E3%81%82%E3%82%8A%E6%96%B9%EF%BC%88%E4%BD%9B%E6%95%99%E5%A4%A7%E5%AD%A6%E7%A0%94%E7%A9%B6%E5%8F%A2%E6%9B%B8%EF%BC%89-%E6%9D%BE%E6%88%B8%E5%AE%8F%E4%BA%88/dp/4623061299'>
+                    <img width='768' height='512' src='./img/books/12.jpg' />
+                  </a>
+                </div>
+                <div class='card-text'>
+                  <a
+                    href='https://www.amazon.co.jp/%E6%97%A5%E8%8B%B1%E3%81%AE%E3%83%95%E3%82%A3%E3%83%BC%E3%83%AB%E3%83%89%E8%AA%BF%E6%9F%BB%E3%81%8B%E3%82%89%E8%80%83%E3%81%88%E3%82%8B%E5%AD%A6%E6%A0%A1%E5%9B%B3%E6%9B%B8%E9%A4%A8%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8B%E7%89%B9%E5%88%A5%E6%94%AF%E6%8F%B4%E6%95%99%E8%82%B2%E3%81%AE%E3%81%82%E3%82%8A%E6%96%B9%EF%BC%88%E4%BD%9B%E6%95%99%E5%A4%A7%E5%AD%A6%E7%A0%94%E7%A9%B6%E5%8F%A2%E6%9B%B8%EF%BC%89-%E6%9D%BE%E6%88%B8%E5%AE%8F%E4%BA%88/dp/4623061299'>
+                    <p class='card-title'>日英のフィールド調査から考える ：学校図書館における特別支援教育のあり方</p>
+                    <p class='card-subtitle'>松戸宏予</p>
+                    <p class='card-subtitle'>ミネルヴァ書房</p>
+                    <p class='card-subtitle'>2012
+                    </p>
+                  </a>
+                </div>
+              </div>
+              <div class='card-container'>
+                <div class='card-img'>
+                  <a
+                    href='https://www.amazon.co.jp/%E3%82%BD%E3%83%BC%E3%82%B7%E3%83%A3%E3%83%AB%E3%83%AF%E3%83%BC%E3%82%AF%E3%83%BB%E3%82%B9%E3%83%BC%E3%83%91%E3%83%BC%E3%83%93%E3%82%B8%E3%83%A7%E3%83%B3%E5%AE%9F%E8%B7%B5%E5%85%A5%E9%96%80%E2%80%95%E8%81%B7%E5%A0%B4%E5%A4%96%E3%82%B9%E3%83%BC%E3%83%91%E3%83%BC%E3%83%93%E3%82%B8%E3%83%A7%E3%83%B3%E3%81%AE%E5%8F%96%E3%82%8A%E7%B5%84%E3%81%BF%E3%81%8B%E3%82%89-%E6%B5%85%E9%87%8E-%E6%AD%A3%E5%97%A3/dp/4860152395'>
+                    <img width='768' height='512' src='./img/books/13.jpg' />
+                  </a>
+                </div>
+                <div class='card-text'>
+                  <a
+                    href='https://www.amazon.co.jp/%E3%82%BD%E3%83%BC%E3%82%B7%E3%83%A3%E3%83%AB%E3%83%AF%E3%83%BC%E3%82%AF%E3%83%BB%E3%82%B9%E3%83%BC%E3%83%91%E3%83%BC%E3%83%93%E3%82%B8%E3%83%A7%E3%83%B3%E5%AE%9F%E8%B7%B5%E5%85%A5%E9%96%80%E2%80%95%E8%81%B7%E5%A0%B4%E5%A4%96%E3%82%B9%E3%83%BC%E3%83%91%E3%83%BC%E3%83%93%E3%82%B8%E3%83%A7%E3%83%B3%E3%81%AE%E5%8F%96%E3%82%8A%E7%B5%84%E3%81%BF%E3%81%8B%E3%82%89-%E6%B5%85%E9%87%8E-%E6%AD%A3%E5%97%A3/dp/4860152395'>
+                    <p class='card-title'>ソーシャルワーク・スーパービジョン実践入門－職場外スーパービジョンの取り組みから－</p>
+                    <p class='card-subtitle'>浅野正嗣（編）</p>
+                    <p class='card-subtitle'>（株）みらい</p>
+                    <p class='card-subtitle'>2011
+                    </p>
+                  </a>
+                </div>
+              </div>
+              <div class='card-container'>
+                <div class='card-img'>
+                  <a
+                    href='https://www.amazon.co.jp/%E5%A4%AB%E5%A9%A6%E9%96%93%E4%BB%8B%E8%AD%B7%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8B%E9%81%A9%E5%BF%9C%E9%81%8E%E7%A8%8B-%E6%9E%97-%E8%91%89%E5%AD%90/dp/4535585857'>
+                    <img width='768' height='512' src='./img/books/14.jpg' />
+                  </a>
+                </div>
+                <div class='card-text'>
+                  <a
+                    href='https://www.amazon.co.jp/%E5%A4%AB%E5%A9%A6%E9%96%93%E4%BB%8B%E8%AD%B7%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8B%E9%81%A9%E5%BF%9C%E9%81%8E%E7%A8%8B-%E6%9E%97-%E8%91%89%E5%AD%90/dp/4535585857'>
+                    <p class='card-title'>夫婦間介護における適応過程</p>
+                    <p class='card-subtitle'>林葉子</p>
+                    <p class='card-subtitle'>日本評論社</p>
+                    <p class='card-subtitle'>2010
+                    </p>
+                  </a>
+                </div>
+              </div>
+              <div class='card-container'>
+                <div class='card-img'>
+                  <a
+                    href='https://www.amazon.co.jp/%E5%88%A9%E7%94%A8%E5%8A%9B-%E6%8F%90%E4%BE%9B%E5%8A%9B%E3%82%92%E4%BF%83%E9%80%B2%E3%81%99%E3%82%8B%E3%82%B1%E3%82%A2%E3%83%9E%E3%83%8D%E3%82%B8%E3%83%A1%E3%83%B3%E3%83%88%E2%80%95%E6%94%AF%E6%8F%B4%E5%9B%B0%E9%9B%A3%E3%81%AA%E3%82%AF%E3%83%A9%E3%82%A4%E3%82%A8%E3%83%B3%E3%83%88%E3%81%AB%E5%AF%BE%E3%81%99%E3%82%8B%E5%AE%9F%E8%B7%B5%E6%B4%BB%E5%8B%95%E3%81%AE%E8%B3%AA%E7%9A%84%E7%A0%94%E7%A9%B6-%E5%B1%B1%E4%BA%95-%E7%90%86%E6%81%B5/dp/4750103632'>
+                    <img width='768' height='512' src='./img/books/15.jpg' />
+                  </a>
+                </div>
+                <div class='card-text'>
+                  <a
+                    href='https://www.amazon.co.jp/%E5%88%A9%E7%94%A8%E5%8A%9B-%E6%8F%90%E4%BE%9B%E5%8A%9B%E3%82%92%E4%BF%83%E9%80%B2%E3%81%99%E3%82%8B%E3%82%B1%E3%82%A2%E3%83%9E%E3%83%8D%E3%82%B8%E3%83%A1%E3%83%B3%E3%83%88%E2%80%95%E6%94%AF%E6%8F%B4%E5%9B%B0%E9%9B%A3%E3%81%AA%E3%82%AF%E3%83%A9%E3%82%A4%E3%82%A8%E3%83%B3%E3%83%88%E3%81%AB%E5%AF%BE%E3%81%99%E3%82%8B%E5%AE%9F%E8%B7%B5%E6%B4%BB%E5%8B%95%E3%81%AE%E8%B3%AA%E7%9A%84%E7%A0%94%E7%A9%B6-%E5%B1%B1%E4%BA%95-%E7%90%86%E6%81%B5/dp/4750103632'>
+                    <p class='card-title'>利用力/提供力を促進するケアマネジメント-支援困難なクライエントに対する実践活動の質的研究-</p>
+                    <p class='card-subtitle'>山井理恵</p>
+                    <p class='card-subtitle'>相川書房</p>
+                    <p class='card-subtitle'>2010
+                    </p>
+                  </a>
+                </div>
+              </div>
+              <div class='card-container'>
+                <div class='card-img'>
+                  <a
+                    href='https://www.amazon.co.jp/%E5%B0%8F%E5%85%90%E3%81%8C%E3%82%93%E3%81%A7%E5%AD%90%E3%81%A9%E3%82%82%E3%82%92%E4%BA%A1%E3%81%8F%E3%81%97%E3%81%9F%E8%A6%AA%E3%81%AE%E6%82%B2%E5%98%86%E3%81%A8%E3%82%B1%E3%82%A2%E2%80%95%E7%B5%86%E3%81%AE%E5%86%8D%E6%A7%8B%E7%AF%89%E3%83%97%E3%83%AD%E3%82%BB%E3%82%B9%E3%81%A8%E3%82%BD%E3%83%BC%E3%82%B7%E3%83%A3%E3%83%AB%E3%83%AF%E3%83%BC%E3%82%AF-%E4%B8%89%E8%BC%AA-%E4%B9%85%E7%BE%8E%E5%AD%90/dp/4903690628'>
+                    <img width='768' height='512' src='./img/books/16.jpg' />
+                  </a>
+                </div>
+                <div class='card-text'>
+                  <a
+                    href='https://www.amazon.co.jp/%E5%B0%8F%E5%85%90%E3%81%8C%E3%82%93%E3%81%A7%E5%AD%90%E3%81%A9%E3%82%82%E3%82%92%E4%BA%A1%E3%81%8F%E3%81%97%E3%81%9F%E8%A6%AA%E3%81%AE%E6%82%B2%E5%98%86%E3%81%A8%E3%82%B1%E3%82%A2%E2%80%95%E7%B5%86%E3%81%AE%E5%86%8D%E6%A7%8B%E7%AF%89%E3%83%97%E3%83%AD%E3%82%BB%E3%82%B9%E3%81%A8%E3%82%BD%E3%83%BC%E3%82%B7%E3%83%A3%E3%83%AB%E3%83%AF%E3%83%BC%E3%82%AF-%E4%B8%89%E8%BC%AA-%E4%B9%85%E7%BE%8E%E5%AD%90/dp/4903690628'>
+                    <p class='card-title'>小児がんで子どもを亡くした親の悲嘆とケア-絆の再構築プロセスとソーシャルワーク-</p>
+                    <p class='card-subtitle'>三輪久美子</p>
+                    <p class='card-subtitle'>生活書院</p>
+                    <p class='card-subtitle'>2010
+                    </p>
+                  </a>
+                </div>
+              </div>
+              <div class='card-container'>
+                <div class='card-img'>
+                  <a
+                    href='https://www.amazon.co.jp/%E7%B2%BE%E7%A5%9E%E9%9A%9C%E5%AE%B3%E8%80%85%E3%81%B8%E3%81%AE%E3%82%BD%E3%83%BC%E3%82%B7%E3%83%A3%E3%83%AB%E3%82%B5%E3%83%9D%E3%83%BC%E3%83%88%E6%B4%BB%E7%94%A8%E2%80%95%E5%BD%93%E4%BA%8B%E8%80%85%E3%81%AE%E3%80%8C%E8%AA%9E%E3%82%8A%E3%80%8D%E3%81%8B%E3%82%89%E3%81%AE%E5%88%86%E6%9E%90-%E9%95%B7%E5%B4%8E-%E5%92%8C%E5%89%87/dp/4623056120'>
+                    <img width='768' height='512' src='./img/books/17.jpg' />
+                  </a>
+                </div>
+                <div class='card-text'>
+                  <a
+                    href='https://www.amazon.co.jp/%E7%B2%BE%E7%A5%9E%E9%9A%9C%E5%AE%B3%E8%80%85%E3%81%B8%E3%81%AE%E3%82%BD%E3%83%BC%E3%82%B7%E3%83%A3%E3%83%AB%E3%82%B5%E3%83%9D%E3%83%BC%E3%83%88%E6%B4%BB%E7%94%A8%E2%80%95%E5%BD%93%E4%BA%8B%E8%80%85%E3%81%AE%E3%80%8C%E8%AA%9E%E3%82%8A%E3%80%8D%E3%81%8B%E3%82%89%E3%81%AE%E5%88%86%E6%9E%90-%E9%95%B7%E5%B4%8E-%E5%92%8C%E5%89%87/dp/4623056120'>
+                    <p class='card-title'>精神障害者へのソーシャルサポートの活用-当事者の「語り」からの分析-</p>
+                    <p class='card-subtitle'>長崎和則</p>
+                    <p class='card-subtitle'>ミネルヴァ書房</p>
+                    <p class='card-subtitle'>2010
+                    </p>
+                  </a>
+                </div>
+              </div>
+              <div class='card-container'>
+                <div class='card-img'>
+                  <a
+                    href='https://www.amazon.co.jp/%E5%AD%90%E3%81%A9%E3%82%82%E8%99%90%E5%BE%85%E3%82%92%E9%98%B2%E3%81%90%E5%B8%82%E7%94%BA%E6%9D%91%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF%E3%81%A8%E3%82%BD%E3%83%BC%E3%82%B7%E3%83%A3%E3%83%AB%E3%83%AF%E3%83%BC%E3%82%AF-%E5%B1%B1%E9%87%8E-%E5%89%87%E5%AD%90/dp/4750330736'>
+                    <img width='768' height='512' src='./img/books/18.jpg' />
+                  </a>
+                </div>
+                <div class='card-text'>
+                  <a
+                    href='https://www.amazon.co.jp/%E5%AD%90%E3%81%A9%E3%82%82%E8%99%90%E5%BE%85%E3%82%92%E9%98%B2%E3%81%90%E5%B8%82%E7%94%BA%E6%9D%91%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF%E3%81%A8%E3%82%BD%E3%83%BC%E3%82%B7%E3%83%A3%E3%83%AB%E3%83%AF%E3%83%BC%E3%82%AF-%E5%B1%B1%E9%87%8E-%E5%89%87%E5%AD%90/dp/4750330736'>
+                    <p class='card-title'>子ども虐待を防ぐ市町村ネットワークとソーシャルワーク-グラウンデッド・セオリー・アプローチによるマネージメント実践理論の構築-</p>
+                    <p class='card-subtitle'>山野則子</p>
+                    <p class='card-subtitle'>明石書店</p>
+                    <p class='card-subtitle'>2009
+                    </p>
+                  </a>
+                </div>
+              </div>
+              <div class='card-container'>
+                <div class='card-img'>
+                  <a
+                    href='https://www.amazon.co.jp/%E5%81%A5%E5%BA%B7%E3%83%9E%E3%82%A4%E3%83%8E%E3%83%AA%E3%83%86%E3%82%A3%E3%81%AE%E7%99%BA%E8%A6%8B-%E3%82%B0%E3%83%A9%E3%82%A6%E3%83%B3%E3%83%87%E3%83%83%E3%83%89%E3%83%BB%E3%82%BB%E3%82%AA%E3%83%AA%E3%83%BC%E3%83%BB%E3%82%A2%E3%83%97%E3%83%AD%E3%83%BC%E3%83%81-%E6%A8%99-%E7%BE%8E%E5%A5%88%E5%AD%90/dp/4335551223'>
+                    <img width='768' height='512' src='./img/books/19.jpg' />
+                  </a>
+                </div>
+                <div class='card-text'>
+                  <a
+                    href='https://www.amazon.co.jp/%E5%81%A5%E5%BA%B7%E3%83%9E%E3%82%A4%E3%83%8E%E3%83%AA%E3%83%86%E3%82%A3%E3%81%AE%E7%99%BA%E8%A6%8B-%E3%82%B0%E3%83%A9%E3%82%A6%E3%83%B3%E3%83%87%E3%83%83%E3%83%89%E3%83%BB%E3%82%BB%E3%82%AA%E3%83%AA%E3%83%BC%E3%83%BB%E3%82%A2%E3%83%97%E3%83%AD%E3%83%BC%E3%83%81-%E6%A8%99-%E7%BE%8E%E5%A5%88%E5%AD%90/dp/4335551223'>
+                    <p class='card-title'>健康マイノリティの発見</p>
+                    <p class='card-subtitle'>標美奈子</p>
+                    <p class='card-subtitle'>弘文堂</p>
+                    <p class='card-subtitle'>2008
+                    </p>
+                  </a>
+                </div>
+              </div>
+              <div class='card-container'>
+                <div class='card-img'>
+                  <a
+                    href='https://www.amazon.co.jp/%E3%82%BD%E3%83%BC%E3%82%B7%E3%83%A3%E3%83%AB%E3%83%AF%E3%83%BC%E3%82%AF%E6%84%9F%E8%A6%9A-%E3%82%B0%E3%83%A9%E3%82%A6%E3%83%B3%E3%83%87%E3%83%83%E3%83%89%E3%83%BB%E3%82%BB%E3%82%AA%E3%83%AA%E3%83%BC%E3%83%BB%E3%82%A2%E3%83%97%E3%83%AD%E3%83%BC%E3%83%81-%E6%A8%AA%E5%B1%B1-%E7%99%BB%E5%BF%97%E5%AD%90/dp/4335551215'>
+                    <img width='768' height='512' src='./img/books/20.jpg' />
+                  </a>
+                </div>
+                <div class='card-text'>
+                  <a
+                    href='https://www.amazon.co.jp/%E3%82%BD%E3%83%BC%E3%82%B7%E3%83%A3%E3%83%AB%E3%83%AF%E3%83%BC%E3%82%AF%E6%84%9F%E8%A6%9A-%E3%82%B0%E3%83%A9%E3%82%A6%E3%83%B3%E3%83%87%E3%83%83%E3%83%89%E3%83%BB%E3%82%BB%E3%82%AA%E3%83%AA%E3%83%BC%E3%83%BB%E3%82%A2%E3%83%97%E3%83%AD%E3%83%BC%E3%83%81-%E6%A8%AA%E5%B1%B1-%E7%99%BB%E5%BF%97%E5%AD%90/dp/4335551215'>
+                    <p class='card-title'>ソーシャルワーク感覚</p>
+                    <p class='card-subtitle'>横山登志子</p>
+                    <p class='card-subtitle'>弘文堂</p>
+                    <p class='card-subtitle'>2008
+                    </p>
+                  </a>
+                </div>
+              </div>
+              <div class='card-container'>
+                <div class='card-img'>
+                  <a
+                    href='https://www.amazon.co.jp/%E3%82%B1%E3%82%A2%E7%8F%BE%E5%A0%B4%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8B%E5%BF%83%E7%90%86%E8%87%A8%E5%BA%8A%E3%81%AE%E8%B3%AA%E7%9A%84%E7%A0%94%E7%A9%B6%E2%80%95%E9%AB%98%E9%BD%A2%E8%80%85%E4%BB%8B%E8%AD%B7%E6%96%BD%E8%A8%AD%E5%88%A9%E7%94%A8%E8%80%85%E3%81%AE%E7%94%9F%E6%B4%BB%E9%81%A9%E5%BF%9C%E3%83%97%E3%83%AD%E3%82%BB%E3%82%B9%E2%80%95-M%E2%80%90GTA%E3%82%B7%E3%83%AA%E3%83%BC%E3%82%BA-%E5%B0%8F%E5%80%89-%E5%95%93%E5%AD%90/dp/4335551142'>
+                    <img width='768' height='512' src='./img/books/21.jpg' />
+                  </a>
+                </div>
+                <div class='card-text'>
+                  <a
+                    href='https://www.amazon.co.jp/%E3%82%B1%E3%82%A2%E7%8F%BE%E5%A0%B4%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8B%E5%BF%83%E7%90%86%E8%87%A8%E5%BA%8A%E3%81%AE%E8%B3%AA%E7%9A%84%E7%A0%94%E7%A9%B6%E2%80%95%E9%AB%98%E9%BD%A2%E8%80%85%E4%BB%8B%E8%AD%B7%E6%96%BD%E8%A8%AD%E5%88%A9%E7%94%A8%E8%80%85%E3%81%AE%E7%94%9F%E6%B4%BB%E9%81%A9%E5%BF%9C%E3%83%97%E3%83%AD%E3%82%BB%E3%82%B9%E2%80%95-M%E2%80%90GTA%E3%82%B7%E3%83%AA%E3%83%BC%E3%82%BA-%E5%B0%8F%E5%80%89-%E5%95%93%E5%AD%90/dp/4335551142'>
+                    <p class='card-title'>ケア現場における心理臨床の質的研究－高齢者介護施設利用者の生活適応プロセス</p>
+                    <p class='card-subtitle'>小倉啓子</p>
+                    <p class='card-subtitle'>弘文堂</p>
+                    <p class='card-subtitle'>2007
+                    </p>
+                  </a>
+                </div>
+              </div>
+              <div class='card-container'>
+                <div class='card-img'>
+                  <a
+                    href='https://www.amazon.co.jp/%E7%94%9F%E6%B4%BB%E5%86%8D%E7%94%9F%E3%81%AB%E3%82%80%E3%81%91%E3%81%A6%E3%81%AE%E6%94%AF%E6%8F%B4%E3%81%A8%E6%94%AF%E6%8F%B4%E3%82%A4%E3%83%B3%E3%83%95%E3%83%A9%E9%96%8B%E7%99%BA%E2%80%95%E3%82%B0%E3%83%A9%E3%82%A6%E3%83%B3%E3%83%87%E3%83%83%E3%83%89%E3%83%BB%E3%82%BB%E3%82%AA%E3%83%AA%E3%83%BC%E3%83%BB%E3%82%A2%E3%83%97%E3%83%AD%E3%83%BC%E3%83%81%E3%81%AB%E5%9F%BA%E3%81%A5%E3%81%8F%E9%80%80%E9%99%A2%E6%8F%B4%E5%8A%A9%E3%83%A2%E3%83%87%E3%83%AB%E5%8C%96%E3%81%AE%E8%A9%A6%E3%81%BF-%E4%B8%89%E6%AF%9B-%E7%BE%8E%E4%BA%88%E5%AD%90/dp/4750103012'>
+                    <img width='768' height='512' src='./img/books/22.jpg' />
+                  </a>
+                </div>
+                <div class='card-text'>
+                  <a
+                    href='https://www.amazon.co.jp/%E7%94%9F%E6%B4%BB%E5%86%8D%E7%94%9F%E3%81%AB%E3%82%80%E3%81%91%E3%81%A6%E3%81%AE%E6%94%AF%E6%8F%B4%E3%81%A8%E6%94%AF%E6%8F%B4%E3%82%A4%E3%83%B3%E3%83%95%E3%83%A9%E9%96%8B%E7%99%BA%E2%80%95%E3%82%B0%E3%83%A9%E3%82%A6%E3%83%B3%E3%83%87%E3%83%83%E3%83%89%E3%83%BB%E3%82%BB%E3%82%AA%E3%83%AA%E3%83%BC%E3%83%BB%E3%82%A2%E3%83%97%E3%83%AD%E3%83%BC%E3%83%81%E3%81%AB%E5%9F%BA%E3%81%A5%E3%81%8F%E9%80%80%E9%99%A2%E6%8F%B4%E5%8A%A9%E3%83%A2%E3%83%87%E3%83%AB%E5%8C%96%E3%81%AE%E8%A9%A6%E3%81%BF-%E4%B8%89%E6%AF%9B-%E7%BE%8E%E4%BA%88%E5%AD%90/dp/4750103012'>
+                    <p class='card-title'>生活再生に向けての支援と支援インフラ開発－グラウンデッド・セオリー・アプローチに基づく大学病院のソーシャルワーカーによる退院援助モデル化の試み－</p>
+                    <p class='card-subtitle'>三毛美予子</p>
+                    <p class='card-subtitle'>相川書房</p>
+                    <p class='card-subtitle'>2003
+                    </p>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
       </div>
-    </section>
-
-    <section id="b">
-     <h2 class="page-h2">書籍</h2>
-     <h3 class="page-h3">会員の書籍</h3>
-     <div class="contener">
-       <ul>
-         <li>得津愼子、家族主体ソーシャルワーク論ー家族レリジエンス概念を手がかりに	ナカニシヤ出版	2018</li>
-         <li>中村聡美、うつ病休職者の集団認知行動療法に関する混合型研究	風間書房	2018</li>
-         <li>佐川佳南枝、記憶と感情のエスノグラフィー	ハーベスト社	2017</li>
-         <li> 鈴木京子、教員の異文化体験―異文化適応・人間的成長・教員としての成長―	風間書房2015</li>
-         <li>岩本　操、ソーシャルワーカーの「役割形成」プロセス－「違和感のある仕事」から組織活動への実践モデル－	中央法規	2015</li>
-         <li>大賀　有記、ソーシャルワーク支援の発展的二重螺旋構造―役割喪失にともなう悲嘆作業過程の分析―	相川書房	2014</li>
-          <li>赤畑　淳、聴覚障害と精神障害をあわせもつ人の支援とコミュニケーション－困難性から理解へ帰結する概念モデルの構築―	ミネルヴァ書房	2014</li>
-          <li> 保正　友子、医療ソーシャルワーカーの成長への道のり～実践能力変容過程に関する質的研究　相川書房	2013</li>
-          <li> 久松　信夫、認知症高齢者ソーシャルワーク－ソーシャルワーカーの困難性と対処行為　相川書房 2013</li>
-          <li> 川先　俊子、韓国における日本語教育必要論の史的展開	ひつじ書房	2013</li>
-          <li>黒岩　晴子、被爆者を援助しつづける医療ソーシャルワーカーたち	本の泉社	2012</li>
-          <li>松戸　宏予、日英のフィールド調査から考える ：学校図書館における特別支援教育のあり方	　ミネルヴァ書房	2012</li>
-          <li>浅野　正嗣（編）、ソーシャルワーク・スーパービジョン実践入門－職場外スーパービジョンの取　　　り組みから－	（株）みらい	2011</li>
-          <li>林　葉子、夫婦間介護における適応過程	日本評論社	2010</li>
-          <li>山井　理恵、利用力/提供力を促進するケアマネジメント-支援困難なクライエントに対する実践活動の質的研究-	相川書房	2010</li>
-          <li>三輪　久美子、小児がんで子どもを亡くした親の悲嘆とケア-絆の再構築プロセスとソーシャルワーク-	生活書院	2010</li>
-          <li>長崎　和則、精神障害者へのソーシャルサポートの活用-当事者の「語り」からの分析-	ミネルヴァ書房	2010</li>
-          <li>山野　則子、子ども虐待を防ぐ市町村ネットワークとソーシャルワーク-グラウンデッド・セオリー・アプローチによるマネージメント実践理論の構築-	明石書店	2009</li>
-          <li>標　美奈子、健康マイノリティの発見	弘文堂	2008</li>
-          <li>横山　登志子、ソーシャルワーク感覚	弘文堂	2008</li>
-          <li>小倉　啓子、ケア現場における心理臨床の質的研究－高齢者介護施設利用者の生活適応プロセス	 弘文堂	2007</li>
-          <li> 三毛　美予子、生活再生に向けての支援と支援インフラ開発－グラウンデッド・ セオリー・アプローチに基づく大学病院のソーシャルワーカーによる退院援助モデル化の試み－	相川書房	2003</li>
-
-       </ul>
-      </div>
-    </section>
-  </div>
-   </div>  <!--コンテンツここまで-->
-</article>
-</main>
+      <!--コンテンツここまで-->
+    </article>
+  </main>
   <footer>
     <div class="inner-mini">
       <nav class="footnav">
         <ul class="mainmav">
-          <li><a href="about.html">M-GTAとは</a></li>
+          <li><a href="about.html">研究会概要</a></li>
+          <li><a href="mgta.html">M-GTAとは</a></li>
           <li><a href="works.html">研究会の活動</a></li>
           <li><a href="intro.html">会員による研究の紹介</a></li>
           <li><a href="contact.html">入会・お問い合わせ</a></li>
-          <li><a href="member.html">会員専用ページ</a></li>
+          <li><a href="member.php">会員専用ページ</a></li>
         </ul>
       </nav>
       <p class="bottom-name">M-GTA研究会</p>
-
-
-
       <p class="copy">Copyright(C) M-GTA研究会 All rights reserved.</p>
-
     </div>
-
-
-        <!-- ページトップへ戻るボタン -->
-        <p class="pagetop" style="display: block;">
-        <a href="#"><img src="/img/modoru.png"></a>
-        </p>
+    <!-- ページトップへ戻るボタン -->
+    <p class="pagetop" style="display: block;">
+      <a href="#"><img src="./img/modoru.png"></a>
+    </p>
   </footer>
 
   <script>
-$(function(){
-  $('a[href^="#"]').click(function(){
-    var speed = 500;
-    var headerHight = 130;
-    var href= $(this).attr("href");
-    var target = $(href == "#" || href == "" ? 'html' : href);
-    var position = target.offset().top-headerHight;
-    $("html, body").animate({scrollTop:position}, speed, "swing");
-    return false;
-  });
-});
-</script>
-
-
-<script>
-jQuery(document).ready(function() {
-  jQuery('.drawer').drawer({
- class: {
-   nav: 'drawer-nav',
-   toggle: 'drawer-toggle',
-   overlay: 'drawer-overlay',
-   open: 'drawer-open',
-   close: 'drawer-close',
-   dropdown: 'drawer-dropdown'
- },
- iscroll: {
-   // Configuring the iScroll
-   // https://github.com/cubiq/iscroll#configuring-the-iscroll
-   mouseWheel: true,
-   preventDefault: false
- },
- showOverlay: true
-});
-});
-</script>
-
-<script>
-jQuery(function(){
- jQuery(window).scroll(function (){
-    jQuery('.effect-fade').each(function(){
-        var elemPos = $(this).offset().top;
-        var scroll = $(window).scrollTop();
-        var windowHeight = $(window).height();
-        if (scroll > elemPos - windowHeight){
-            $(this).addClass('effect-scroll');
-        }
+    $(function () {
+      $('a[href^="#"]').click(function () {
+        var speed = 500;
+        var headerHight = 130;
+        var href = $(this).attr("href");
+        var target = $(href == "#" || href == "" ? 'html' : href);
+        var position = target.offset().top - headerHight;
+        $("html, body").animate({ scrollTop: position }, speed, "swing");
+        return false;
+      });
     });
- });
-});
-</script>
+  </script>
+  <script>
+    jQuery(document).ready(function () {
+      jQuery('.drawer').drawer({
+        class: {
+          nav: 'drawer-nav',
+          toggle: 'drawer-toggle',
+          overlay: 'drawer-overlay',
+          open: 'drawer-open',
+          close: 'drawer-close',
+          dropdown: 'drawer-dropdown'
+        },
+        iscroll: {
+          // Configuring the iScroll
+          // https://github.com/cubiq/iscroll#configuring-the-iscroll
+          mouseWheel: true,
+          preventDefault: false
+        },
+        showOverlay: true
+      });
+    });
+  </script>
+  <script>
+    jQuery(function () {
+      jQuery(window).scroll(function () {
+        jQuery('.effect-fade').each(function () {
+          var elemPos = $(this).offset().top;
+          var scroll = $(window).scrollTop();
+          var windowHeight = $(window).height();
+          if (scroll > elemPos - windowHeight) {
+            $(this).addClass('effect-scroll');
+          }
+        });
+      });
+    });
+  </script>
 </body>
+
 </html>

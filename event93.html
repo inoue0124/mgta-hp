@@ -1,186 +1,188 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
-  <meta name="robots" content="noindex">
   <meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width">
+  <meta name="viewport" content="width=device-width">
   <meta name="description" content="M-GTA研究会（実践的グランデッド・セオリー研究会）">
   <meta name="keywords" content="M-GTA研究,実践的グランデッド・セオリー研究会">
-	<title>M-GTAとは|M-GTA研究会（実践的グランデッド・セオリー研究会）</title>
+  <title>M-GTAとは|M-GTA研究会（実践的グランデッド・セオリー研究会）</title>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-  <script src="/js/jquery.bxslider.js"></script>
+  <script src="./js/jquery.bxslider.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.2.0/iscroll.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/js/drawer.min.js"></script>
-	<link href="/css/base.css" rel="stylesheet" type="text/css" media="all">
-  <link rel="stylesheet" type="text/css" href="/css/colorbox.css">
-	<link rel="shortcut icon" href="img/favicon.ico">
-  <script src="/js/jquery.colorbox.js"></script>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/css/drawer.min.css" rel="stylesheet" type="text/css" media="all">
-  <link href="/css/style.min.css" rel="stylesheet" type="text/css" media="all">
+  <link href="./css/base.css" rel="stylesheet" type="text/css" media="all">
+  <link rel="stylesheet" type="text/css" href="./css/colorbox.css">
+  <link rel="shortcut icon" href="img/favicon.ico">
+  <script src="./js/jquery.colorbox.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/css/drawer.min.css" rel="stylesheet" type="text/css"
+    media="all">
+  <link href="./css/style.css" rel="stylesheet" type="text/css" media="all">
   <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
 </head>
 
 <body class="page drawer drawer--right">
   <main>
-<header>
-  <div class="fixnav">
+    <header>
+      <div class="fixnav">
 
-      <div class="h1wrap">
-        <div class="inner-big">
-      <p class="h1"><a href="/">M-GTA研究会<span>（実践的グランデッド・セオリー研究会）</span></a></p>
-      <div class="search">
-        <form method="get" action="https://www.google.co.jp/search" target="_blank">
-          <input type="text" name="q" size="31" maxlength="255" value="">
-          <input type="submit" name="btng" value="検索">
-          <input type="hidden" name="hl" value="ja">
-          <input type="hidden" name="sitesearch" value="https://m-gta.jp/">
-        </form>
+        <div class="h1wrap">
+          <div class="inner-big">
+            <p class="h1"><a href="./">M-GTA研究会<span>（実践的グランデッド・セオリー研究会）</span></a></p>
+            <div class="search">
+              <form method="get" action="https://www.google.co.jp/search" target="_blank">
+                <input type="text" name="q" size="31" maxlength="255" value="">
+                <input type="submit" name="btng" value="検索">
+                <input type="hidden" name="hl" value="ja">
+                <input type="hidden" name="sitesearch" value="https://m-gta.jp/">
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <div class="mainnav_wrap">
+          <div class="inner-big">
+            <nav>
+              <ul class="top_nav">
+                <li><a href="./">Home<i class="fas fa-chevron-right"></i></a></li>
+                <li><a href="./en/" target="_blank">English<i class="fas fa-chevron-right"></i></a></li>
+              </ul>
+              </ul>
+              <ul class="mainmav">
+                <li><a href="about.html">研究会概要</a></li>
+                <li><a href="mgta.html">M-GTAとは</a></li>
+                <li><a href="works.html">研究会の活動</a></li>
+                <li><a href="intro.html">会員による研究の紹介</a></li>
+                <li><a href="contact.html">入会・お問い合わせ</a></li>
+                <li><a href="member.php">会員専用ページ</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
       </div>
-       </div>
-    </div>
 
-      <div class="mainnav_wrap">
-        <div class="inner-big">
-        <nav>
-          <ul class="top_nav">
-            <li><a href="/">Home<i class="fas fa-chevron-right"></i></a></li>
-            <li><a href="/en/" target="_blank">English<i class="fas fa-chevron-right"></i></a></li>
-          </ul>
-          </ul>
-          <ul class="mainmav">
-            <li class="current"><a href="about.html">M-GTAとは</a></li>
-            <li><a href="works.html">研究会の活動</a></li>
-            <li><a href="intro.html">会員による研究の紹介</a></li>
-            <li><a href="contact.html">入会・お問い合わせ</a></li>
-            <li><a href="member.html">会員専用ページ</a></li>
-          </ul>
-        </nav>
+      <!--ドロワー-->
+      <button type="button" class="pc-none drawer-toggle drawer-hamburger">
+        <!--<span class="sr-only"><img src="./img/common/menu.png"></span>-->
+        <span class="drawer-hamburger-icon"></span>
+      </button>
+      <nav class="pc-none drawer-nav accordion-container" role="navigation" id="accordion">
+        <ul class="drawer-menu">
+          <li class="menu-item"><a href="./">HOME</a></li>
+          <li class="menu-item"><a href="about.html">研究会概要</a></li>
+          <li class="menu-item"><a href="mgta.html">M-GTAとは</a></li>
+          <li class="menu-item"><a href="works.html">研究会の活動</a></li>
+          <li class="menu-item"><a href="intro.html">会員による研究の紹介</a></li>
+          <li class="menu-item"><a href="contact.html">入会・お問い合わせ</a></li>
+          <li class="menu-item"><a href="member.php">会員専用ページ</a></li>
+          <li class="menu-item"><a href="./en/" target="_blank">English Site</a></li>
+        </ul>
+      </nav>
       </div>
-    </div>
-  </div>
+    </header>
+    <article>
+      <h1 class="page-h1">M-GTAとは</h1>
+      <!--サイドメニューここから-->
+      <div class="contens inner">
+        <div class="side">
+          <nav class="side-nav">
+            <h2>CONTENTS MENU</h2>
+            <ul>
+              <li class="clearfix"><a href="about2.html">M-GTA概要<i class="fas fa-chevron-right"></i></a></li>
+              <li class="clearfix"><a href="#b">活動内容<i class="fas fa-chevron-right"></i></a></li>
+              <li class="clearfix"><a href="#c">会則<i class="fas fa-chevron-right"></i></a></li>
+            </ul>
+          </nav>
+          <div class="contact">
+            <h3>ご入会・お問い合わせ</h3>
+            <p>ご入会や研究会へのお問い合わせは<br class="sp-none">こちらへどうぞ</p>
+            <p class="mt50 link-b3"><a class="clearfix" href="contact.html">メールでのお問い合わせ<i
+                  class="fas fa-chevron-right"></i></a></p>
+          </div>
+        </div>
+        <!--サイドメニューここまで-->
+        <!--メインコンテンツここから-->
+        <div class="main">
+          <!--パンくずリスト-->
+          <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+              <a itemprop="item" href="./">
+                <span itemprop="name">home</span>
+              </a>
+              <meta itemprop="position" content="1" />
+            </li>
 
-  <!--ドロワー-->
-  <button type="button" class="pc-none drawer-toggle drawer-hamburger">
-    <!--<span class="sr-only"><img src="/img/common/menu.png"></span>-->
-    <span class="drawer-hamburger-icon"></span>
-  </button>
-  <nav class="pc-none drawer-nav accordion-container" role="navigation" id= "accordion">
-    <ul class="drawer-menu">
-      <li class="menu-item"><a href="/">HOME</a></li>
-      <li class="menu-item"><a href="about.html">M-GTAとは</a></li>
-    <li class="menu-item"><a href="works.html">研究会の活動</a></li>
-    <li class="menu-item"><a href="intro.html">会員による研究の紹介</a></li>
-    <li class="menu-item"><a href="contact.html">入会・お問い合わせ</a></li>
-    <li class="menu-item"><a href="member.html">会員専用ページ</a></li>
-    <li class="menu-item"><a href="/en/" target="_blank">English Site</a></li>
-    </ul>
-  </nav>
-</div>
-</header>
-<article>
-  <h1 class="page-h1">M-GTAとは</h1>
-  <!--サイドメニューここから-->
-  <div class="contens inner">
-  <div class="side">
-    <nav class="side-nav">
-      <h2>CONTENTS MENU</h2>
-      <ul>
-        <li class="clearfix"><a href="about2.html">M-GTA概要<i class="fas fa-chevron-right"></i></a></li>
-        <li class="clearfix"><a href="#b">活動内容<i class="fas fa-chevron-right"></i></a></li>
-        <li class="clearfix"><a href="#c">会則<i class="fas fa-chevron-right"></i></a></li>
-      </ul>
-    </nav>
-    <div class="contact">
-      <h3>ご入会・お問い合わせ</h3>
-      <p>ご入会や研究会へのお問い合わせは<br class="sp-none">こちらへどうぞ</p>
-      <p class="mt50 link-b3"><a class="clearfix" href="contact.html">メールでのお問い合わせ<i class="fas fa-chevron-right"></i></a></p>
-    </div>
-  </div>
-  <!--サイドメニューここまで-->
-  <!--メインコンテンツここから-->
-  <div class="main">
-    <!--パンくずリスト-->
-    <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
-      <li itemprop="itemListElement" itemscope
-      itemtype="https://schema.org/ListItem">
-      <a itemprop="item" href="/">
-        <span itemprop="name">home</span>
-      </a>
-      <meta itemprop="position" content="1" />
-      </li>
-
-      <li itemprop="itemListElement" itemscope
-        itemtype="https://schema.org/ListItem">
-        <a itemprop="item" href="about.html">
-          <span itemprop="name">M-GTAとは</span>
-        </a>
-        <meta itemprop="position" content="2" />
-      </li>
-    </ol>
-    <!--パンくずリスト-->
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+              <a itemprop="item" href="mgta.html">
+                <span itemprop="name">M-GTAとは</span>
+              </a>
+              <meta itemprop="position" content="2" />
+            </li>
+          </ol>
+          <!--パンくずリスト-->
 
 
-    <section id="a">
-     <h2 class="page-h2">第93回M-GTA定例研究会</h2>
-     <h3 class="page-h3">内　　容</h3>
-     <div class="contener">
-       <p class="page-p">日時：2021年10月9日（土）*13時00分～16時30分<br>
-                         場所：オンライン（ZOOM開催）<br>
-                         スケジュール：<br>
-                         ・開会 13:00-13:05<br>
-                         ・発表<br>
-                         1. 小沼聖治氏（SV：林葉子先生）*13:05-14:25<br>
-                         「精神保健福祉士によるソーシャルアクションのモデル形成」<br>
-                         （休憩）*14:25-14:35<br>
-                         2. 鈴木聡子氏（SV：山崎浩司先生）*14:35-15:55<br>
-                         「災害時に被災地で生活する妊婦の母になる体験」<br>
-                         ・まとめ／ディスカッション *15:55-16:25<br>
-                           ※参加者からの質問コーナー、懇親の時間などを検討<br>
-                         ・閉会（研究会からお知らせ）* 16:25-16:30<br>
+          <section id="a">
+            <h2 class="page-h2">第93回M-GTA定例研究会</h2>
+            <h3 class="page-h3">内　　容</h3>
+            <div class="contener">
+              <p class="page-p">日時：2021年10月9日（土）*13時00分～16時30分<br>
+                場所：オンライン（ZOOM開催）<br>
+                スケジュール：<br>
+                ・開会 13:00-13:05<br>
+                ・発表<br>
+                1. 小沼聖治氏（SV：林葉子先生）*13:05-14:25<br>
+                「精神保健福祉士によるソーシャルアクションのモデル形成」<br>
+                （休憩）*14:25-14:35<br>
+                2. 鈴木聡子氏（SV：山崎浩司先生）*14:35-15:55<br>
+                「災害時に被災地で生活する妊婦の母になる体験」<br>
+                ・まとめ／ディスカッション *15:55-16:25<br>
+                ※参加者からの質問コーナー、懇親の時間などを検討<br>
+                ・閉会（研究会からお知らせ）* 16:25-16:30<br>
 
-     <h3 class="page-h3">参加申し込み方法</h3>
-                         参加登録はマイページログイン後の「イベント情報」からお願いいたします。<br>
-                         (締切：10月5日(火) 午後6時)<br>
-                         https://m-gta.shikuminet.jp/login/<br>
-<br>
-                         ※既にメールでご連絡頂いている方も、マイページよりお申し込み下さい。<br>
-     <h3 class="page-h3">注　　意</h3>
-                         1) 参加登録をした方には、申し込み締め切り後、マイページにご登録済みのメールアドレスへZOOMのIDとパスワードを送付致します。ご登録アドレスをご確認ください。<br>
-                         2) 非会員の方も1回に限り参加費2000円を事前に振込んで頂いたうえで、参加ができます。後日、研究会トップページに公開される「非会員専用参加登録フォーム」よりお手続をお願い致します。<br>
-                         （現在ホームページ調整中のため、非会員の参加申し込み方法が変更となる可能性があります）<br>
-                         3) 会員の方は必ずマイページからお申し込み下さい。会員が非会員専用参加登録フォームからお申込みされ参加費をお支払い頂いた場合、返金は行いませんので予めご了承下さい。<br>
-     <h3 class="page-h3">お願い</h3>
-                         1) ZOOMに関する操作や利用環境等のお問合せは受け付けておりません。ご自身でのご確認をお願い致します。<br>
-                         2) 参加にあたってはお名前と所属を表示して頂きます。もし、お名前と所属を表示して頂けない場合は、ホストが削除する場合もありますのでご承知下さい。<br>
-<br>
-<br>
-     <h3 class="page-h3">会員以外の方の参加方法</h3>
-非会員の方は、会員の申し込み後に席に余裕がある場合のみ、１回のみ参加可能です。<br>
-参加費は資料代として、2000円申し受けます。<br>
-<br>
-［参加申込み方法］<br>
-(1)氏名・ご所属先・連絡先メールアドレスを明記の上、M-GTA研究会事務局までメールを送信してください。<br>
-　(締切：10月5日(火) 午後6時)<br>
-(2)振込先をご連絡いたしますので、参加費2,000円を振込締切りまでにお振込みください。振込が確認できない場合は、参加していただくことはできません。<br>
-　(振込締切：10月7日(木) 午後6時)<br>
-(3)参加費のご入金を確認しましたら、研究会の前日までにZoomアドレスをメール送信させていただきます。事前にそのアドレスから登録をしていただくと、研究会開催用のZOOMのIDとパスワードが送られてきます。<br>
-<br>
-     <h3 class="page-h3">他のM-GTA研究会の会員の方の参加方法</h3>
-(1)氏名・ご所属のM-GTA研究会名・ご所属先・連絡先メールアドレスを明記の上、M-GTA研究会事務局までメールを送信してください。<br>
-(2)研究会の前日までにZoomアドレスをメール送信させていただきます。事前にそのアドレスから登録をしていただくと、研究会開催用のZOOMのIDとパスワードが送られてきます。<br>
+              <h3 class="page-h3">参加申し込み方法</h3>
+              参加登録はマイページログイン後の「イベント情報」からお願いいたします。<br>
+              (締切：10月5日(火) 午後6時)<br>
+              https://m-gta.shikuminet.jp/login/<br>
+              <br>
+              ※既にメールでご連絡頂いている方も、マイページよりお申し込み下さい。<br>
+              <h3 class="page-h3">注　　意</h3>
+              1) 参加登録をした方には、申し込み締め切り後、マイページにご登録済みのメールアドレスへZOOMのIDとパスワードを送付致します。ご登録アドレスをご確認ください。<br>
+              2) 非会員の方も1回に限り参加費2000円を事前に振込んで頂いたうえで、参加ができます。後日、研究会トップページに公開される「非会員専用参加登録フォーム」よりお手続をお願い致します。<br>
+              （現在ホームページ調整中のため、非会員の参加申し込み方法が変更となる可能性があります）<br>
+              3) 会員の方は必ずマイページからお申し込み下さい。会員が非会員専用参加登録フォームからお申込みされ参加費をお支払い頂いた場合、返金は行いませんので予めご了承下さい。<br>
+              <h3 class="page-h3">お願い</h3>
+              1) ZOOMに関する操作や利用環境等のお問合せは受け付けておりません。ご自身でのご確認をお願い致します。<br>
+              2) 参加にあたってはお名前と所属を表示して頂きます。もし、お名前と所属を表示して頂けない場合は、ホストが削除する場合もありますのでご承知下さい。<br>
+              <br>
+              <br>
+              <h3 class="page-h3">会員以外の方の参加方法</h3>
+              非会員の方は、会員の申し込み後に席に余裕がある場合のみ、１回のみ参加可能です。<br>
+              参加費は資料代として、2000円申し受けます。<br>
+              <br>
+              ［参加申込み方法］<br>
+              (1)氏名・ご所属先・連絡先メールアドレスを明記の上、M-GTA研究会事務局までメールを送信してください。<br>
+              　(締切：10月5日(火) 午後6時)<br>
+              (2)振込先をご連絡いたしますので、参加費2,000円を振込締切りまでにお振込みください。振込が確認できない場合は、参加していただくことはできません。<br>
+              　(振込締切：10月7日(木) 午後6時)<br>
+              (3)参加費のご入金を確認しましたら、研究会の前日までにZoomアドレスをメール送信させていただきます。事前にそのアドレスから登録をしていただくと、研究会開催用のZOOMのIDとパスワードが送られてきます。<br>
+              <br>
+              <h3 class="page-h3">他のM-GTA研究会の会員の方の参加方法</h3>
+              (1)氏名・ご所属のM-GTA研究会名・ご所属先・連絡先メールアドレスを明記の上、M-GTA研究会事務局までメールを送信してください。<br>
+              (2)研究会の前日までにZoomアドレスをメール送信させていただきます。事前にそのアドレスから登録をしていただくと、研究会開催用のZOOMのIDとパスワードが送られてきます。<br>
 
 
 
-</p>
-<!--
+              </p>
+              <!--
          <p class="link-btn"><a href="about2.html">全文を読む<i class="fas fa-chevron-right"></i></a></p>
 -->
-      </div>
-    </section>
+            </div>
+          </section>
 
 
 
-<!--
+          <!--
 
     <section id="b" class="effect-fade">
      <h2 class="page-h2">活動内容</h2>
@@ -295,19 +297,21 @@
 -->
 
 
-  </div>
-   </div>  <!--コンテンツここまで-->
-</article>
-</main>
+        </div>
+      </div>
+      <!--コンテンツここまで-->
+    </article>
+  </main>
   <footer>
     <div class="inner-mini">
       <nav class="footnav">
         <ul class="mainmav">
-          <li><a href="about.html">M-GTAとは</a></li>
+          <li><a href="about.html">研究会概要</a></li>
+          <li><a href="mgta.html">M-GTAとは</a></li>
           <li><a href="works.html">研究会の活動</a></li>
           <li><a href="intro.html">会員による研究の紹介</a></li>
           <li><a href="contact.html">入会・お問い合わせ</a></li>
-          <li><a href="member.html">会員専用ページ</a></li>
+          <li><a href="member.php">会員専用ページ</a></li>
         </ul>
       </nav>
       <p class="bottom-name">M-GTA研究会</p>
@@ -319,61 +323,62 @@
     </div>
 
 
-        <!-- ページトップへ戻るボタン -->
-        <p class="pagetop" style="display: block;">
-        <a href="#"><img src="/img/modoru.png"></a>
-        </p>
+    <!-- ページトップへ戻るボタン -->
+    <p class="pagetop" style="display: block;">
+      <a href="#"><img src="./img/modoru.png"></a>
+    </p>
   </footer>
 
   <script>
-$(function(){
-  $('a[href^="#"]').click(function(){
-    var speed = 500;
-    var headerHight = 130;
-    var href= $(this).attr("href");
-    var target = $(href == "#" || href == "" ? 'html' : href);
-    var position = target.offset().top-headerHight;
-    $("html, body").animate({scrollTop:position}, speed, "swing");
-    return false;
-  });
-});
-</script>
-
-<script>
-jQuery(document).ready(function() {
-  jQuery('.drawer').drawer({
- class: {
-   nav: 'drawer-nav',
-   toggle: 'drawer-toggle',
-   overlay: 'drawer-overlay',
-   open: 'drawer-open',
-   close: 'drawer-close',
-   dropdown: 'drawer-dropdown'
- },
- iscroll: {
-   // Configuring the iScroll
-   // https://github.com/cubiq/iscroll#configuring-the-iscroll
-   mouseWheel: true,
-   preventDefault: false
- },
- showOverlay: true
-});
-});
-</script>
-
-<script>
-jQuery(function(){
- jQuery(window).scroll(function (){
-    jQuery('.effect-fade').each(function(){
-        var elemPos = $(this).offset().top;
-        var scroll = $(window).scrollTop();
-        var windowHeight = $(window).height();
-        if (scroll > elemPos - windowHeight){
-            $(this).addClass('effect-scroll');
-        }
+    $(function () {
+      $('a[href^="#"]').click(function () {
+        var speed = 500;
+        var headerHight = 130;
+        var href = $(this).attr("href");
+        var target = $(href == "#" || href == "" ? 'html' : href);
+        var position = target.offset().top - headerHight;
+        $("html, body").animate({ scrollTop: position }, speed, "swing");
+        return false;
+      });
     });
- });
-});
-</script>
+  </script>
+
+  <script>
+    jQuery(document).ready(function () {
+      jQuery('.drawer').drawer({
+        class: {
+          nav: 'drawer-nav',
+          toggle: 'drawer-toggle',
+          overlay: 'drawer-overlay',
+          open: 'drawer-open',
+          close: 'drawer-close',
+          dropdown: 'drawer-dropdown'
+        },
+        iscroll: {
+          // Configuring the iScroll
+          // https://github.com/cubiq/iscroll#configuring-the-iscroll
+          mouseWheel: true,
+          preventDefault: false
+        },
+        showOverlay: true
+      });
+    });
+  </script>
+
+  <script>
+    jQuery(function () {
+      jQuery(window).scroll(function () {
+        jQuery('.effect-fade').each(function () {
+          var elemPos = $(this).offset().top;
+          var scroll = $(window).scrollTop();
+          var windowHeight = $(window).height();
+          if (scroll > elemPos - windowHeight) {
+            $(this).addClass('effect-scroll');
+          }
+        });
+      });
+    });
+  </script>
 </body>
+
 </html>
