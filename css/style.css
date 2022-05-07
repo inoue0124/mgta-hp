@@ -921,6 +921,11 @@ p.submit input {
   color: #555;
 }
 
+.adjust-header {
+  padding-top: 200px;
+  margin-top: -200px;
+}
+
 @media screen and (max-width: 749px) {
   .card-text {
     width: 100%;
