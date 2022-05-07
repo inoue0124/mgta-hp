@@ -16,7 +16,9 @@
 <html lang="ja">
 
 <head>
+  <meta name="robots" content="noindex">
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
   <meta name="description" content="M-GTA研究会（実践的グランデッド・セオリー研究会）">
   <meta name="keywords" content="M-GTA研究,実践的グランデッド・セオリー研究会">
   <title>会員専用ページ|M-GTA研究会（実践的グランデッド・セオリー研究会）</title>
