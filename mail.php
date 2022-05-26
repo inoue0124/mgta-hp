@@ -254,6 +254,7 @@ if (($confirmDsp == 0 || $sendmail == 1) && $empty_flag != 1) {
 								<ul class="top_nav">
 									<li><a href="./">Home<i class="fas fa-chevron-right"></i></a></li>
 									<li><a href="./en/" target="_blank">English<i class="fas fa-chevron-right"></i></a></li>
+									<li><a href="https://m-gta.shikuminet.jp/login/" target="_blank">マイページ(シクミネット)<i class="fas fa-chevron-right"></i></a></li>
 								</ul>
 								</ul>
 								<ul class="mainmav">
@@ -282,6 +283,7 @@ if (($confirmDsp == 0 || $sendmail == 1) && $empty_flag != 1) {
 						<li class="menu-item"><a href="contact.html">入会・お問い合わせ</a></li>
 						<li class="menu-item"><a href="member.php">会員専用ページ</a></li>
 						<li class="menu-item"><a href="./en/" target="_blank">English Site</a></li>
+						<li><a href="https://m-gta.shikuminet.jp/login/" target="_blank">マイページ(シクミネット)<i class="fas fa-chevron-right"></i></a></li>
 					</ul>
 				</nav>
 				</div>
@@ -493,6 +495,7 @@ if (($jumpPage == 0 && $sendmail == 1) || ($jumpPage == 0 && ($confirmDsp == 0 &
 								<ul class="top_nav">
 									<li><a href="./">Home<i class="fas fa-chevron-right"></i></a></li>
 									<li><a href="./en/" target="_blank">English<i class="fas fa-chevron-right"></i></a></li>
+									<li><a href="https://m-gta.shikuminet.jp/login/" target="_blank">マイページ(シクミネット)<i class="fas fa-chevron-right"></i></a></li>
 								</ul>
 								</ul>
 								<ul class="mainmav">
@@ -521,6 +524,7 @@ if (($jumpPage == 0 && $sendmail == 1) || ($jumpPage == 0 && ($confirmDsp == 0 &
 						<li class="menu-item"><a href="contact.html">入会・お問い合わせ</a></li>
 						<li class="menu-item"><a href="member.php">会員専用ページ</a></li>
 						<li class="menu-item"><a href="./en/" target="_blank">English Site</a></li>
+						<li><a href="https://m-gta.shikuminet.jp/login/" target="_blank">マイページ(シクミネット)<i class="fas fa-chevron-right"></i></a></li>
 					</ul>
 				</nav>
 				</div>

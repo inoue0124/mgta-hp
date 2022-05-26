@@ -60,6 +60,7 @@ if (isset($_POST['password'])) {
               <ul class="top_nav">
                 <li><a href="./">Home<i class="fas fa-chevron-right"></i></a></li>
                 <li><a href="./en/" target="_blank">English<i class="fas fa-chevron-right"></i></a></li>
+                <li><a href="https://m-gta.shikuminet.jp/login/" target="_blank">マイページ(シクミネット)<i class="fas fa-chevron-right"></i></a></li>
               </ul>
               </ul>
               <ul class="mainmav">
@@ -90,6 +91,7 @@ if (isset($_POST['password'])) {
           <li class="menu-item"><a href="contact.html">入会・お問い合わせ</a></li>
           <li class="menu-item"><a href="member.php">会員専用ページ</a></li>
           <li class="menu-item"><a href="./en/" target="_blank">English Site</a></li>
+          <li><a href="https://m-gta.shikuminet.jp/login/" target="_blank">マイページ(シクミネット)<i class="fas fa-chevron-right"></i></a></li>
         </ul>
       </nav>
       </div>
