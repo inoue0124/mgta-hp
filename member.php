@@ -1,15 +1,15 @@
 <?php
-  session_start();
-  if (isset($_SESSION['isAuthorized']) && $_SESSION['isAuthorized'] == true) {
+session_start();
+if (isset($_SESSION['isAuthorized']) && $_SESSION['isAuthorized'] == true) {
+  $_SESSION['isAuthorized'] = true;
+}
+if (isset($_POST['password'])) {
+  if ($_POST['password'] === 'GroundedOnData') {
     $_SESSION['isAuthorized'] = true;
+  } else {
+    $_SESSION['isAuthorized'] = false;
   }
-  if (isset($_POST['password'])) {
-    if ($_POST['password'] === 'GroundedOnData') {
-      $_SESSION['isAuthorized'] = true;
-    } else {
-      $_SESSION['isAuthorized'] = false;
-    }
-  }
+}
 ?>
 
 <!DOCTYPE html>
@@ -19,9 +19,9 @@
   <meta name="robots" content="noindex">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width">
-  <meta name="description" content="M-GTA研究会（実践的グランデッド・セオリー研究会）">
-  <meta name="keywords" content="M-GTA研究,実践的グランデッド・セオリー研究会">
-  <title>会員専用ページ|M-GTA研究会（実践的グランデッド・セオリー研究会）</title>
+  <meta name="description" content="M-GTA研究会（実践的グランデッド・セオリー・アプローチ研究会）">
+  <meta name="keywords" content="M-GTA研究,実践的グランデッド・セオリー・アプローチ研究会">
+  <title>会員専用ページ|M-GTA研究会（実践的グランデッド・セオリー・アプローチ研究会）</title>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
   <script src="./js/jquery.bxslider.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.2.0/iscroll.min.js"></script>
@@ -30,8 +30,7 @@
   <link rel="stylesheet" type="text/css" href="./css/colorbox.css">
   <link rel="shortcut icon" href="img/favicon.ico">
   <script src="./js/jquery.colorbox.js"></script>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/css/drawer.min.css" rel="stylesheet" type="text/css"
-    media="all">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/css/drawer.min.css" rel="stylesheet" type="text/css" media="all">
   <link href="./css/style.css" rel="stylesheet" type="text/css" media="all">
   <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
 </head>
@@ -43,7 +42,7 @@
 
         <div class="h1wrap">
           <div class="inner-big">
-            <p class="h1"><a href="./">M-GTA研究会<span>（実践的グランデッド・セオリー研究会）</span></a></p>
+            <p class="h1"><a href="./">M-GTA研究会<span>（実践的グランデッド・セオリー・アプローチ研究会）</span></a></p>
             <div class="search">
               <form method="get" action="https://www.google.co.jp/search" target="_blank">
                 <input type="text" name="q" size="31" maxlength="255" value="">
@@ -110,8 +109,7 @@
           <div class="contact">
             <h3>ご入会•お問い合わせ</h3>
             <p>ご入会や研究会へのお問い合わせは<br class="sp-none">こちらへどうぞ</p>
-            <p class="mt50 link-b3"><a class="clearfix" href="contact.html">メールでのお問い合わせ<i
-                  class="fas fa-chevron-right"></i></a></p>
+            <p class="mt50 link-b3"><a class="clearfix" href="contact.html">メールでのお問い合わせ<i class="fas fa-chevron-right"></i></a></p>
           </div>
         </div>
         <!--サイドメニューここまで-->
@@ -539,11 +537,11 @@
                     </tr>
                   </table>
             EOM;
-              if (isset($_SESSION['isAuthorized']) && $_SESSION['isAuthorized'] == false) {
-                echo <<<EOMM
+            if (isset($_SESSION['isAuthorized']) && $_SESSION['isAuthorized'] == false) {
+              echo <<<EOMM
                   <p style="font-size:12px; color:red;">パスワードが間違っています。会員の方でパスワードをお忘れの方は事務局までお問い合わせください。</p>
                 EOMM;
-              }
+            }
             echo <<<EOM
                 <p class="submit">
                   <input type="submit" value="　 送信 　" />
@@ -552,7 +550,7 @@
             </div>
             EOM;
           }
-      ?>
+          ?>
     </article>
   </main>
   <footer>
@@ -578,26 +576,28 @@
   </footer>
 
   <script>
-    $(function () {
-      $('a[href^="#"]').click(function () {
+    $(function() {
+      $('a[href^="#"]').click(function() {
         var speed = 500;
         var headerHight = 130;
         var href = $(this).attr("href");
         var target = $(href == "#" || href == "" ? 'html' : href);
         var position = target.offset().top - headerHight;
-        $("html, body").animate({ scrollTop: position }, speed, "swing");
+        $("html, body").animate({
+          scrollTop: position
+        }, speed, "swing");
         return false;
       });
     });
-    $(document).ready(function () {
+    $(document).ready(function() {
       $('.drawer').drawer({
         class: {
           nav: 'drawer-nav',
-          toggle: 'drawer-toggle',
-          overlay: 'drawer-overlay',
-          open: 'drawer-open',
-          close: 'drawer-close',
-          dropdown: 'drawer-dropdown'
+            toggle: 'drawer-toggle',
+            overlay: 'drawer-overlay',
+            open: 'drawer-open',
+            close: 'drawer-close',
+            dropdown: 'drawer-dropdown'
         },
         iscroll: {
           // Configuring the iScroll
@@ -608,9 +608,9 @@
         showOverlay: true
       });
     });
-    $(function () {
-      $(window).scroll(function () {
-        $('.effect-fade').each(function () {
+    $(function() {
+      $(window).scroll(function() {
+        $('.effect-fade').each(function() {
           var elemPos = $(this).offset().top;
           var scroll = $(window).scrollTop();
           var windowHeight = $(window).height();
@@ -620,7 +620,7 @@
         });
       });
     });
-    $("#type-selection").change(function () {
+    $("#type-selection").change(function() {
       if ($("#type-selection").val() === "author") {
         $("#form-degree").hide()
         setRequired("#form-degree", false)
@@ -638,6 +638,7 @@
         setRequired("#form-degree", true)
       }
     })
+
     function setRequired(form_id, val) {
       input = $(`${form_id} input`)
       for (i = 0; i < input.length; i++) {
