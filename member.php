@@ -440,8 +440,16 @@ if (isset($_POST['password'])) {
                     <td>2020-12-16</td>
                     <td><a href='https://m-gta.jp/pdf/nl/M-GTANewsLetter104.pdf' class="text-link">第104号</a></td>
                     <td>2021-03-09</td>
-                    <td></td>
-                    <td></td>
+                    <td><a href='https://m-gta.jp/pdf/nl/M-GTANewsLetter105.pdf' class="text-link">第105号</a></td>
+                    <td>2021-07-28</td>
+                  </tr>
+                  <tr>
+                    <td><a href='https://m-gta.jp/pdf/nl/M-GTANewsLetter106.pdf' class="text-link">第106号</a></td>
+                    <td>2021-08-01</td>
+                    <td><a href='https://m-gta.jp/pdf/nl/M-GTANewsLetter107.pdf' class="text-link">第107号</a></td>
+                    <td>2021-11-12</td>
+                    <td><a href='https://m-gta.jp/pdf/nl/M-GTANewsLetter108.pdf' class="text-link">第108号</a></td>
+                    <td>2022-03-24</td>
                   </tr>
                 </table>
               </div>
