@@ -145,7 +145,7 @@ if (isset($_POST['password'])) {
                   <div class="date">2022年1月23日(日)</div>
                   <div class="title">2022年度年次総会ご報告</div>
                   <div class="content">2022年5月7日にM-GTA研究会2022年度年次総会が開催されました。
-                  <a href='https://m-gta.jp/pdf/news/2022年度M-GTA研究会総会議案.pdf' class="text-link">議案</a>はすべて承認されました。
+                  <a href='https://m-gta.jp/pdf/news/2022年度M-GTA研究会総会議案.pdf' class="text-link" target="_blank">議案</a>はすべて承認されました。
                   </div>
                 </div>
               </div>
