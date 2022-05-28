@@ -24,7 +24,7 @@ if (version_compare(PHP_VERSION, '5.1.0', '>=')) { //PHP5.1.0以上の場合の�
 $site_top = "./contact.html";
 
 // 管理者メールアドレス ※メールを受け取るメールアドレス(複数指定する場合は「,」で区切ってください 例 $to = "aa@aa.aa,bb@bb.bb";)
-$to = "office@m-gta.jp,info@m-eights.com";
+$to = "office@m-gta.jp";
 
 //フォームのメールアドレス入力箇所のname属性の値（name="○○"　の○○部分）
 $Email = "メールアドレス";
@@ -296,8 +296,8 @@ if (($confirmDsp == 0 || $sendmail == 1) && $empty_flag != 1) {
 						<nav class="side-nav">
 							<h2>CONTENTS MENU</h2>
 							<ul>
-								<li class="clearfix"><a href="#a">入会希望<i class="fas fa-chevron-right"></i></a></li>
-								<li class="clearfix"><a href="#b">お問い合わせ<i class="fas fa-chevron-right"></i></a></li>
+								<li class="clearfix"><a href="./contact.html#b">お問合せフォーム<i class="fas fa-chevron-right"></i></a></li>
+								<li class="clearfix"><a href="./contact.html#c">よくあるご質問<i class="fas fa-chevron-right"></i></a></li>
 							</ul>
 						</nav>
 						<div class="contact">
