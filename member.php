@@ -511,9 +511,14 @@ if (isset($_POST['password'])) {
                           <td>
                             <select class="area" name="研究領域" id="type-selection" required disabled>
                               <option value="選択してください">選択してください</option>
-                              <option value="看護学">看護学</option>
-                              <option value="医学">医学</option>
-                            </select>
+                              <option value="看護・保健">看護・保健</option>
+                              <option value="社会福祉・ソーシャルワーク">社会福祉・ソーシャルワーク</option>
+                              <option value="臨床心理・心理">臨床心理・心理</option>
+                              <option value="経営・キャリア">経営・キャリア</option>
+                              <option value="教育学/言語教育/関連領域">教育学/言語教育/関連領域</option>
+                              <option value="社会学/行動科学/関連領域">社会学/行動科学/関連領域</option>
+                              <option value="その他">その他</option>
+                              </select>
                           </td>
                         </tr>
                         <tr>
