@@ -361,21 +361,22 @@ article {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  margin-bottom: 3rem;
+  margin-bottom: 16px;
 }
 
 @media screen and (max-width: 749px) {
   .wwd {
     -ms-flex-pack: distribute;
     justify-content: space-around;
-    margin-bottom: 3rem;
+    margin-bottom: 16px;
   }
 }
 
 .wwd li {
   text-align: center;
   font-size: 12px;
-  padding: 4rem;
+  margin: 2rem;
+  width: 120px;
   font-weight: bold;
 }
 
