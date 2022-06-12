@@ -107,7 +107,7 @@ TEXT;
 
 
 //自動返信メールに署名（フッター）を表示(する=1, しない=0)※管理者宛にも表示されます。
-$mailFooterDsp = 1;
+$mailFooterDsp = 0;
 
 //上記で「1」を選択時に表示する署名（フッター）（FOOTER～FOOTER;の間に記述してください）
 $mailSignature = <<< FOOTER
